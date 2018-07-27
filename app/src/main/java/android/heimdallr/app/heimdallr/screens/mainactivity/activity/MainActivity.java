@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.MenuItem;
 import android.widget.TextView;
 
@@ -50,6 +51,28 @@ public class MainActivity extends CoreActivity {
         mTextMessage = (TextView) findViewById(R.id.message);
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+
+        Log.e("Value", String.valueOf(checkUpperCase("Assa")));
+    }
+
+    private boolean checkString(){
+        boolean value;
+
+        String message = "9Assa";
+
+        char firstChar = message.charAt(0);
+        String firstCharAsString =  String.valueOf(firstChar);
+
+        value = firstCharAsString.matches("[A-Z]+");
+
+        return value;
+    }
+
+    private boolean checkUpperCase(String value){
+        char firstChar = value.charAt(0);
+        String firstCharAsString =  String.valueOf(firstChar);
+
+        return firstCharAsString.matches("[A-Z]+");
     }
 
 }

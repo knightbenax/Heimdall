@@ -50,7 +50,7 @@ public class SkewedLinearLayout extends LinearLayout {
         half_height = half_height - 10;
         third_height = height - 45;
         //setOrientation(LinearLayout.HORIZONTAL);
-        setGravity(Gravity.BOTTOM);
+        //setGravity(Gravity.BOTTOM);
         setAlwaysDrawnWithCacheEnabled(true);
         setWillNotDraw(false);
         setLayerType(View.LAYER_TYPE_SOFTWARE, null);
@@ -82,7 +82,7 @@ public class SkewedLinearLayout extends LinearLayout {
 
         height = this.getHeight();
         width = this.getWidth();
-        half_height = height - 280;
+        half_height = height - 200;
         //half_height = ;
         third_height = height;
 
