@@ -1728,6 +1728,10 @@
         "source": "/Users/knightbenax/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/78ce7c185b3403d27b51d17f3ed5a92b/res/drawable-xxhdpi-v4/abc_scrubber_track_mtrl_alpha.9.png"
     },
     {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable_top_gradient.xml.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/src/main/res/drawable/top_gradient.xml"
+    },
+    {
         "merged": "/Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-ldpi_arrow_up.png.flat",
         "source": "/Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/src/main/res/drawable-ldpi/arrow_up.png"
     },

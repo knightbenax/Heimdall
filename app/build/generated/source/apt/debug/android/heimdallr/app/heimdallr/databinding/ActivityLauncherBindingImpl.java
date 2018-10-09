@@ -14,18 +14,18 @@ public class ActivityLauncherBindingImpl extends ActivityLauncherBinding impleme
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.top_panel, 8);
-        sViewsWithIds.put(R.id.weather_holder, 9);
-        sViewsWithIds.put(R.id.weather_icon, 10);
-        sViewsWithIds.put(R.id.weather_tag, 11);
-        sViewsWithIds.put(R.id.gesture_holder, 12);
-        sViewsWithIds.put(R.id.buttons_holder, 13);
-        sViewsWithIds.put(R.id.apps_list_holder, 14);
-        sViewsWithIds.put(R.id.apps_list_recycler, 15);
+        sViewsWithIds.put(R.id.notch, 8);
+        sViewsWithIds.put(R.id.top_panel, 9);
+        sViewsWithIds.put(R.id.weather_holder, 10);
+        sViewsWithIds.put(R.id.weather_icon, 11);
+        sViewsWithIds.put(R.id.weather_tag, 12);
+        sViewsWithIds.put(R.id.gesture_holder, 13);
+        sViewsWithIds.put(R.id.arrow_up, 14);
+        sViewsWithIds.put(R.id.buttons_holder, 15);
+        sViewsWithIds.put(R.id.apps_list_holder, 16);
+        sViewsWithIds.put(R.id.apps_list_recycler, 17);
     }
     // views
-    @NonNull
-    private final android.widget.TextView mboundView1;
     // variables
     @Nullable
     private final android.view.View.OnClickListener mCallback2;
@@ -44,32 +44,34 @@ public class ActivityLauncherBindingImpl extends ActivityLauncherBinding impleme
     // Inverse Binding Event Handlers
 
     public ActivityLauncherBindingImpl(@Nullable android.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 16, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 18, sIncludes, sViewsWithIds));
     }
     private ActivityLauncherBindingImpl(android.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
-            , (android.widget.LinearLayout) bindings[14]
-            , (android.support.v7.widget.RecyclerView) bindings[15]
-            , (android.widget.LinearLayout) bindings[13]
+            , (android.widget.LinearLayout) bindings[16]
+            , (android.support.v7.widget.RecyclerView) bindings[17]
+            , (android.widget.ImageButton) bindings[14]
+            , (android.widget.LinearLayout) bindings[15]
             , (android.widget.ImageButton) bindings[7]
             , (android.widget.ImageButton) bindings[3]
             , (android.support.constraint.ConstraintLayout) bindings[0]
             , (android.widget.ImageButton) bindings[6]
-            , (android.widget.LinearLayout) bindings[12]
+            , (android.widget.LinearLayout) bindings[13]
+            , (android.widget.TextView) bindings[1]
+            , (android.view.View) bindings[8]
             , (android.widget.ImageButton) bindings[2]
             , (android.widget.ImageButton) bindings[4]
-            , (android.widget.LinearLayout) bindings[8]
             , (android.widget.LinearLayout) bindings[9]
-            , (android.widget.ImageView) bindings[10]
-            , (android.widget.TextView) bindings[11]
+            , (android.widget.LinearLayout) bindings[10]
+            , (android.widget.ImageView) bindings[11]
+            , (android.widget.TextView) bindings[12]
             , (android.widget.ImageButton) bindings[5]
             );
         this.chromeApp.setTag(null);
         this.contactApp.setTag(null);
         this.container.setTag(null);
         this.emailApp.setTag(null);
-        this.mboundView1 = (android.widget.TextView) bindings[1];
-        this.mboundView1.setTag(null);
+        this.greetingText.setTag(null);
         this.phoneApp.setTag(null);
         this.smsApp.setTag(null);
         this.whatsApp.setTag(null);
@@ -175,7 +177,7 @@ public class ActivityLauncherBindingImpl extends ActivityLauncherBinding impleme
         if ((dirtyFlags & 0x3L) != 0) {
             // api target 1
 
-            android.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView1, modelGreeting);
+            android.databinding.adapters.TextViewBindingAdapter.setText(this.greetingText, modelGreeting);
         }
     }
     // Listener Stub Implementations

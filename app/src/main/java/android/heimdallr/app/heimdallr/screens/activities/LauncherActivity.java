@@ -1,8 +1,6 @@
 package android.heimdallr.app.heimdallr.screens.activities;
 
-import android.animation.Animator;
 import android.annotation.SuppressLint;
-import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.databinding.DataBindingUtil;
 import android.heimdallr.app.heimdallr.BuildConfig;
@@ -10,6 +8,7 @@ import android.heimdallr.app.heimdallr.HeimdallrApplication;
 import android.heimdallr.app.heimdallr.R;
 import android.heimdallr.app.heimdallr.core.api.models.WeatherResponse;
 import android.heimdallr.app.heimdallr.core.daggger.components.AppMainComponent;
+import android.heimdallr.app.heimdallr.core.listeners.RecyclerViewDisabler;
 import android.heimdallr.app.heimdallr.core.models.App;
 import android.heimdallr.app.heimdallr.core.permissions.PermissionsManager;
 import android.heimdallr.app.heimdallr.core.utils.HeimdallrState;
@@ -20,12 +19,9 @@ import android.heimdallr.app.heimdallr.screens.viewmodels.LauncherActivityViewMo
 import android.location.Location;
 import android.os.Bundle;
 import android.support.constraint.ConstraintSet;
-import android.support.v4.view.GestureDetectorCompat;
 import android.support.v4.view.MotionEventCompat;
 import android.support.v4.view.animation.FastOutSlowInInterpolator;
 import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.text.Html;
 import android.transition.TransitionManager;
 import android.util.DisplayMetrics;
 import android.util.Log;
@@ -35,7 +31,6 @@ import android.view.ScaleGestureDetector;
 import android.view.View;
 import android.view.animation.AccelerateInterpolator;
 import android.view.animation.DecelerateInterpolator;
-import android.widget.Toast;
 
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
@@ -45,7 +40,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
-import java.security.Permission;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
@@ -62,9 +56,17 @@ public class LauncherActivity extends CoreActivity{
 
 
     private static final int INVALID_POINTER_ID = 5000;
+    private static final int UP = 0;
+    private static final int DOWN = 1;
+    private static final int UNKNOWN = 3;
+
+    private static final int WHITE = 0;
+    private static final int BLACK = 1;
 
     @Inject
     LauncherActivityViewModel launcherActivityViewModel;
+
+    public HideDrawerListener hideDrawerListener;
 
     PermissionsManager permissionsManager;
 
@@ -73,9 +75,12 @@ public class LauncherActivity extends CoreActivity{
 
     private String UNIVERSAL_ERROR_STRING = "Something went wrong. Heimdallr couldn't process the request";
     AppsAdapter appsAdapter;
-    GestureDetectorCompat gestureDetector;
+    //GestureDetectorCompat gestureDetector;
+    RecyclerViewDisabler recyclerViewDisabler;
 
     boolean fetchApps = false;
+
+    GestureDetector gestureDetector;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -97,7 +102,7 @@ public class LauncherActivity extends CoreActivity{
     @Override
     public void onBackPressed(){
         if (HeimdallrState.getInstance().getCurrentScreen().equals(HeimdallrState.DRAWER)){
-            closeDrawer();
+            moveViewToBottom();
         } else {
             super.onBackPressed();
         }
@@ -111,12 +116,78 @@ public class LauncherActivity extends CoreActivity{
     private void initGestureListener() {
         mScaleDetector = new ScaleGestureDetector(this, new ScaleGestureDetector.SimpleOnScaleGestureListener());
 
+         gestureDetector = new GestureDetector(new GestureDetector.SimpleOnGestureListener() {
+            public void onLongPress(MotionEvent e) {
+                //Log.e("Er", "Longpress detected");
+                if (theme == WHITE){
+                    //change to black
+                    setHeimdallrTheme(BLACK);
+                    theme = BLACK;
+                } else if (theme == BLACK) {
+                    //change to white
+                    setHeimdallrTheme(WHITE);
+                    theme = WHITE;
+                }
+            }
+        });
+
+
+
+
         DisplayMetrics displayMetrics = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
         height = displayMetrics.heightPixels;
         width = displayMetrics.widthPixels;
         activityLauncherBinding.appsListRecycler.setTranslationY(height);
         mPosX = width; mPosY = height;
+
+        hideDrawerListener =  new HideDrawerListener() {
+            @Override
+            public void hideDrawer() {
+                moveViewToBottom();
+            }
+        };
+
+        recyclerViewDisabler = new RecyclerViewDisabler(activityLauncherBinding.appsListRecycler, this);
+        activityLauncherBinding.appsListRecycler.setOnFlingListener(recyclerViewDisabler);
+    }
+
+
+    private void setHeimdallrTheme(int theme){
+        switch (theme){
+            case WHITE:
+                TransitionManager.beginDelayedTransition(activityLauncherBinding.container);
+                activityLauncherBinding.phoneApp.setColorFilter(null);
+                activityLauncherBinding.contactApp.setColorFilter(null);
+                activityLauncherBinding.smsApp.setColorFilter(null);
+                activityLauncherBinding.whatsApp.setColorFilter(null);
+                activityLauncherBinding.emailApp.setColorFilter(null);
+                activityLauncherBinding.chromeApp.setColorFilter(null);
+                activityLauncherBinding.arrowUp.setColorFilter(null);
+                activityLauncherBinding.weatherIcon.setColorFilter(null);
+                activityLauncherBinding.weatherTag.setTextColor(getResources().getColor(R.color.white));
+                activityLauncherBinding.weatherTag.setShadowLayer(4, 0, 0, getResources().getColor(R.color.trans_black));
+                activityLauncherBinding.greetingText.setTextColor(getResources().getColor(R.color.white));
+                activityLauncherBinding.greetingText.setShadowLayer(4, 0, 0, getResources().getColor(R.color.trans_black));
+                setLightStatusBar(true);
+                break;
+            case BLACK:
+                TransitionManager.beginDelayedTransition(activityLauncherBinding.container);
+                activityLauncherBinding.phoneApp.setColorFilter(getResources().getColor(R.color.dark_black));
+                activityLauncherBinding.contactApp.setColorFilter(getResources().getColor(R.color.dark_black));
+                activityLauncherBinding.smsApp.setColorFilter(getResources().getColor(R.color.dark_black));
+                activityLauncherBinding.whatsApp.setColorFilter(getResources().getColor(R.color.dark_black));
+                activityLauncherBinding.emailApp.setColorFilter(getResources().getColor(R.color.dark_black));
+                activityLauncherBinding.chromeApp.setColorFilter(getResources().getColor(R.color.dark_black));
+                activityLauncherBinding.arrowUp.setColorFilter(getResources().getColor(R.color.dark_black));
+                activityLauncherBinding.weatherIcon.setColorFilter(getResources().getColor(R.color.dark_black));
+                activityLauncherBinding.weatherTag.setTextColor(getResources().getColor(R.color.dark_black));
+                activityLauncherBinding.weatherTag.setShadowLayer(0, 0, 0, getResources().getColor(R.color.trans_black));
+                activityLauncherBinding.greetingText.setTextColor(getResources().getColor(R.color.dark_black));
+                activityLauncherBinding.greetingText.setShadowLayer(0, 0, 0, getResources().getColor(R.color.trans_black));
+                setLightStatusBar(false);
+                break;
+        }
     }
 
     private void setUpRecycler(List<App> appsList){
@@ -128,20 +199,20 @@ public class LauncherActivity extends CoreActivity{
         activityLauncherBinding.appsListRecycler.setHasFixedSize(true);
         fetchApps = true;
 
-        activityLauncherBinding.appsListRecycler.addOnScrollListener(new RecyclerView.OnScrollListener() {
+        /*activityLauncherBinding.appsListRecycler.addOnScrollListener(new RecyclerView.OnScrollListener() {
             @Override
             public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
                 if (!activityLauncherBinding.appsListRecycler.canScrollVertically(-1)){
-                    //closeDrawer();
+
                 }
                 super.onScrolled(recyclerView, dx, dy);
             }
-        });
+        });*/
     }
 
     @Override
     public void onPause(){
-        closeDrawer();
+        moveViewToBottom();
         super.onPause();
     }
 
@@ -152,38 +223,22 @@ public class LauncherActivity extends CoreActivity{
         super.onResume();
     }
 
-    private void closeDrawer(){
-        Log.e("Close", "yes");
-        ConstraintSet constraintSet = new ConstraintSet();
-        constraintSet.clone(activityLauncherBinding.container);
-        constraintSet.clear(activityLauncherBinding.appsListRecycler.getId(), ConstraintSet.TOP);
-        constraintSet.connect(activityLauncherBinding.appsListRecycler.getId(), ConstraintSet.TOP, activityLauncherBinding.container.getId(), ConstraintSet.BOTTOM);
-        TransitionManager.beginDelayedTransition(activityLauncherBinding.container);
-        constraintSet.applyTo(activityLauncherBinding.container);
-
-        setVisibility(activityLauncherBinding.gestureHolder, View.VISIBLE);
-        setVisibility(activityLauncherBinding.buttonsHolder, View.VISIBLE);
-        setVisibility(activityLauncherBinding.topPanel, View.VISIBLE);
-        //activityLauncherBinding.appsListRecycler.scrollToPosition(0);
-        activityLauncherBinding.appsListRecycler.invalidate();
-        //setVisibility(activityLauncherBinding.appsListRecycler, View.GONE);
-
-        HeimdallrState.getInstance().setCurrentScreen(HeimdallrState.HOME);
-        setLightStatusBar(false);
-    }
-
 
     // The ‘active pointer’ is the one currently moving our object.
     private int mActivePointerId = INVALID_POINTER_ID;
     private ScaleGestureDetector mScaleDetector;
     float mLastTouchX = 0, mLastTouchY = 0, mPosX = 0, mPosY = 0, mDx = 0, mDy = 0;
     int height = 0, width = 0;
-    boolean startMoving = false;
+    int swipeDirection = UP;
+    int theme = WHITE;
+
 
     @Override
     public boolean onTouchEvent(MotionEvent ev) {
         // Let the ScaleGestureDetector inspect all events.
+        gestureDetector.onTouchEvent(ev);
         mScaleDetector.onTouchEvent(ev);
+
 
         final int action = MotionEventCompat.getActionMasked(ev);
 
@@ -216,20 +271,28 @@ public class LauncherActivity extends CoreActivity{
                 //mDx = dx;
                 //mDy = dy;
 
+                //Log.e("Direction", String.valueOf(dy));
+
+                if (dy < 0){
+                    swipeDirection = UP;
+                } else if (dy > 0) {
+                    swipeDirection = DOWN;
+                } else {
+                    swipeDirection = UNKNOWN;
+                }
+
                 mPosX += dx;
                 mPosY += dy;
 
                 mDx = mPosY;
                 mDy = mPosY;
 
-                //setVisibility(activityLauncherBinding.appsListHolder, View.VISIBLE);
                 float alphaValue = (mPosY / height) * 1;
                 alphaValue = 1 - alphaValue;
                 //Log.e("Alpha", String.valueOf(alphaValue));
                 activityLauncherBinding.appsListHolder.setAlpha(alphaValue);
                 activityLauncherBinding.appsListRecycler.setTranslationY(mPosY);
-                //Log.e("Pointer", String.valueOf(mPosY));
-                //Log.e("Pointer", String.valueOf(mActivePointerId));
+
                 //Remember this touch position for the next move event
                 mLastTouchX = x;
                 mLastTouchY = y;
@@ -239,88 +302,26 @@ public class LauncherActivity extends CoreActivity{
             case MotionEvent.ACTION_UP: {
                 mActivePointerId = INVALID_POINTER_ID;
 
-                Log.e("DoneY", String.valueOf(mDy));
-                float finalFingerPosition = mDy;
-                float halfHeight = height / 2;
                 mDy = mPosY - mLastTouchY;
-                Log.e("Done", "Yes");
-                Log.e("DoneY", String.valueOf(mDy));
+                //Log.e("Done", "Yes");
+                //Log.e("DoneY", String.valueOf(mDy));
+                //Log.e("DoneY", String.valueOf(mLastTouchY));
 
                 float value = Math.abs(mDy);
 
-                if (value > 10){
-                    if (finalFingerPosition < halfHeight){
+                if (value > 300){
+                    if (swipeDirection == UP){
                         //the finger ended up in the top part of the screen.
                         //Check if the difference is much and swipe up;
                         moveViewToTop();
-                    } else if (finalFingerPosition >= halfHeight){
+                    } else if (swipeDirection == DOWN || swipeDirection == UNKNOWN){
                         //the finger ended in the bottom, so move down
-                        Log.e("Height", String.valueOf(height));
-                        activityLauncherBinding.appsListHolder.animate().alpha(0).setDuration(80).setInterpolator(new AccelerateInterpolator());
-                        activityLauncherBinding.appsListRecycler.animate().translationY(height).setDuration(100).setListener(new Animator.AnimatorListener() {
-                            @Override
-                            public void onAnimationStart(Animator animator) {
-
-                            }
-
-                            @Override
-                            public void onAnimationEnd(Animator animator) {
-                                //setVisibility(activityLauncherBinding.appsListRecycler, View.GONE);
-                            }
-
-                            @Override
-                            public void onAnimationCancel(Animator animator) {
-
-                            }
-
-                            @Override
-                            public void onAnimationRepeat(Animator animator) {
-
-                            }
-                        });
-                        //set mPosY back to the height;
-                        mPosY = height;
+                        moveViewToBottom();
                     }
+                } else {
+                    moveViewToBottom();
                 }
 
-                //mDx = mPosY;
-
-                /*if (mDy < 0){
-                    //this is a swipe up. Move view up.
-                    //float value = Math.abs(mDy);
-                    Log.e("Done", String.valueOf(value));
-                    if (value > 10){
-                        moveViewToTop();
-                    } else {
-                        Log.e("Height", String.valueOf(height));
-                        activityLauncherBinding.appsListHolder.animate().alpha(0).setDuration(80).setInterpolator(new AccelerateInterpolator());
-                        activityLauncherBinding.appsListRecycler.animate().translationY(height).setDuration(100).setListener(new Animator.AnimatorListener() {
-                            @Override
-                            public void onAnimationStart(Animator animator) {
-
-                            }
-
-                            @Override
-                            public void onAnimationEnd(Animator animator) {
-                                //setVisibility(activityLauncherBinding.appsListRecycler, View.GONE);
-                            }
-
-                            @Override
-                            public void onAnimationCancel(Animator animator) {
-
-                            }
-
-                            @Override
-                            public void onAnimationRepeat(Animator animator) {
-
-                            }
-                        });
-                        //set mPosY back to the height;
-                        mPosY = height;
-                    }
-                } else if (mDy > 0){
-                    //this is a swipe down. Move view up.
-                }*/
                 break;
             }
 
@@ -334,7 +335,7 @@ public class LauncherActivity extends CoreActivity{
                 final int pointerIndex = MotionEventCompat.getActionIndex(ev);
                 final int pointerId = MotionEventCompat.getPointerId(ev, pointerIndex);
 
-                Log.e("Pointer Done", "Yes");
+                //Log.e("Pointer Done", "Yes");
 
                 if (pointerId == mActivePointerId) {
                     // This was our active pointer going up. Choose a new
@@ -350,11 +351,35 @@ public class LauncherActivity extends CoreActivity{
         return true;
     }
 
+    private void moveViewToBottom(){
+        //Log.e("Height", String.valueOf(height));
+        activityLauncherBinding.appsListHolder.animate().alpha(0).setDuration(110).setStartDelay(10).setInterpolator(new AccelerateInterpolator());
+        activityLauncherBinding.appsListRecycler.animate().translationY(height).setDuration(85).setInterpolator(new DecelerateInterpolator());
+        //set mPosY back to the height;
+        mPosY = height;
+
+        HeimdallrState.getInstance().setCurrentScreen(HeimdallrState.HOME);
+        setLightStatusBar(false);
+
+        ConstraintSet constraintSet = new ConstraintSet();
+        constraintSet.clone(activityLauncherBinding.container);
+        TransitionManager.beginDelayedTransition(activityLauncherBinding.container);
+        constraintSet.applyTo(activityLauncherBinding.container);
+
+        setVisibility(activityLauncherBinding.gestureHolder, View.VISIBLE);
+        setVisibility(activityLauncherBinding.buttonsHolder, View.VISIBLE);
+        setVisibility(activityLauncherBinding.topPanel, View.VISIBLE);
+
+        //activityLauncherBinding.appsListRecycler.removeOnItemTouchListener(recyclerViewDisabler);
+        activityLauncherBinding.appsListRecycler.setNestedScrollingEnabled(false);
+        //setVisibility(activityLauncherBinding.appsListRecycler, View.VISIBLE);
+    }
+
     private void moveViewToTop(){
-        setVisibility(activityLauncherBinding.appsListRecycler, View.VISIBLE);
+        //setVisibility(activityLauncherBinding.appsListRecycler, View.VISIBLE);
         //activityLauncherBinding.appsListHolder.
-        activityLauncherBinding.appsListHolder.animate().alpha(1).setDuration(80).setInterpolator(new AccelerateInterpolator());
-        activityLauncherBinding.appsListRecycler.animate().translationY(0).setDuration(80).setInterpolator(new FastOutSlowInInterpolator()).setListener(null);
+        activityLauncherBinding.appsListHolder.animate().alpha(1).setDuration(110).setStartDelay(10).setInterpolator(new AccelerateInterpolator());
+        activityLauncherBinding.appsListRecycler.animate().translationY(0).setDuration(85).setInterpolator(new FastOutSlowInInterpolator());
         HeimdallrState.getInstance().setCurrentScreen(HeimdallrState.DRAWER);
         setLightStatusBar(true);
 
@@ -366,7 +391,10 @@ public class LauncherActivity extends CoreActivity{
         setVisibility(activityLauncherBinding.gestureHolder, View.GONE);
         setVisibility(activityLauncherBinding.buttonsHolder, View.GONE);
         setVisibility(activityLauncherBinding.topPanel, View.GONE);
-        setVisibility(activityLauncherBinding.appsListRecycler, View.VISIBLE);
+
+        //activityLauncherBinding.appsListRecycler.addOnItemTouchListener(recyclerViewDisabler);
+        activityLauncherBinding.appsListRecycler.setNestedScrollingEnabled(true);
+        //setVisibility(activityLauncherBinding.appsListRecycler, View.VISIBLE);
     }
 
     private void setVisibility(View view, int visibility){
@@ -527,71 +555,6 @@ public class LauncherActivity extends CoreActivity{
 
     }
 
-    /*@Override
-    public boolean onFling(MotionEvent motionEvent1, MotionEvent motionEvent2, float X, float Y) {
-        //Toast.makeText(LauncherActivity.this, "You Swiped!", Toast.LENGTH_LONG).show();
-        //Log.e("Swipe", "Yes");
-        if (motionEvent1.getY() - motionEvent2.getY() > 20) {
-            //Toast.makeText(this, "You Swiped up!", Toast.LENGTH_LONG).show();
-            openDrawer();
-            return true;
-        }
-
-        if (motionEvent2.getY() - motionEvent1.getY() > 20) {
-            //Toast.makeText(this, "You Swiped Down!", Toast.LENGTH_LONG).show();
-            //closeDrawer();
-            return true;
-        }
-
-        if (motionEvent1.getX() - motionEvent2.getX() > 50) {
-            //Toast.makeText(MainActivity.this, "You Swiped Left!", Toast.LENGTH_LONG).show();
-            return true;
-        }
-
-        if (motionEvent2.getX() - motionEvent1.getX() > 50) {
-            //Toast.makeText(MainActivity.this, "You Swiped Right!", Toast.LENGTH_LONG).show();
-            return true;
-        } else {
-            return true;
-        }
-    }
-
-    @Override
-    public void onLongPress(MotionEvent arg0) {
-        // TODO Auto-generated method stub
-    }
-
-    @Override
-    public boolean onScroll(MotionEvent arg0, MotionEvent arg1, float arg2, float arg3) {
-        // TODO Auto-generated method stub
-        return false;
-    }
-
-    @Override
-    public void onShowPress(MotionEvent arg0) {
-        // TODO Auto-generated method stub
-    }
-
-    @Override
-    public boolean onSingleTapUp(MotionEvent arg0) {
-        // TODO Auto-generated method stub
-        return false;
-    }
-
-    @Override
-    public boolean onTouchEvent(MotionEvent motionEvent) {
-        // TODO Auto-generated method stub
-        gestureDetector.onTouchEvent(motionEvent);
-        return true;
-    }
-
-    @Override
-    public boolean onDown(MotionEvent arg0) {
-        // TODO Auto-generated method stub
-        return false;
-    }*/
-
-
     /**
      * This hombre helps us to filter messages from the errorbody
      * **/
@@ -615,5 +578,9 @@ public class LauncherActivity extends CoreActivity{
         }
 
         return message;
+    }
+
+    public interface HideDrawerListener{
+        void hideDrawer();
     }
 }

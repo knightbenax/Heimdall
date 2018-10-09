@@ -84,9 +84,7 @@ public class LauncherActivityViewModel extends CoreViewModel {
     }
 
     private List<App> getApps(){
-
         List<App> appsList;
-
         PackageManager pm = launcherActivity.getPackageManager();
         appsList = new ArrayList<>();
 

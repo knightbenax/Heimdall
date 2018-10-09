@@ -33,4 +33,6 @@
     <dimen name="size_72dp">72dp</dimen>
     <dimen name="size_82dp">82dp</dimen>
     <dimen name="size_120dp">120dp</dimen>
+    <dimen name="size_160dp">160dp</dimen>
+    <dimen name="size_200dp">200dp</dimen>
 </resources>

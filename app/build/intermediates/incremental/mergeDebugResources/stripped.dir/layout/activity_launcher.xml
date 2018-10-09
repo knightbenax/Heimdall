@@ -11,12 +11,17 @@
     <android.support.constraint.ConstraintLayout
         xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/container"
-
-
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fitsSystemWindows="true"
         tools:context=".screens.activities.LauncherActivity" android:tag="layout/activity_launcher_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+        
+        <View
+            android:layout_width="match_parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/notch"
+            android:background="@drawable/top_gradient"
+            android:layout_height="@dimen/size_200dp"/>
 
 
         <LinearLayout
@@ -33,6 +38,7 @@
             <TextView
                 android:tag="binding_1"         
                 android:shadowRadius="4"
+                android:id="@+id/greeting_text"
                 android:shadowColor="@color/trans_black"
                 style="@style/GreetingText"
                  />
@@ -65,6 +71,18 @@
 
             </LinearLayout>
 
+            <TextView
+                android:layout_marginTop="@dimen/size_10dp"
+                android:text="@string/_4_tasks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:shadowRadius="4"
+                android:visibility="gone"
+                android:shadowColor="@color/trans_black"
+                android:textSize="@dimen/font_16sp"
+                />
+
         </LinearLayout>
 
         <LinearLayout
@@ -78,6 +96,7 @@
 
             <ImageButton
                 android:background="@null"
+                android:id="@+id/arrow_up"
                 android:layout_width="@dimen/size_24dp"
                 android:layout_height="@dimen/size_24dp"
                 android:scaleType="centerInside"
@@ -158,6 +177,7 @@
                 android:paddingLeft="@dimen/size_14dp"
                 android:paddingStart="@dimen/size_14dp"
                 android:paddingRight="@dimen/size_14dp"
+                android:nestedScrollingEnabled="false"
                 android:paddingEnd="@dimen/size_14dp"
                 android:layout_gravity="center"
                 app:layout_constraintTop_toTopOf="parent"

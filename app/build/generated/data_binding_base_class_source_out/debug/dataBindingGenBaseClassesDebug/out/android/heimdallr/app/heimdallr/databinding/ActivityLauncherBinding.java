@@ -25,6 +25,9 @@ public abstract class ActivityLauncherBinding extends ViewDataBinding {
   public final RecyclerView appsListRecycler;
 
   @NonNull
+  public final ImageButton arrowUp;
+
+  @NonNull
   public final LinearLayout buttonsHolder;
 
   @NonNull
@@ -41,6 +44,12 @@ public abstract class ActivityLauncherBinding extends ViewDataBinding {
 
   @NonNull
   public final LinearLayout gestureHolder;
+
+  @NonNull
+  public final TextView greetingText;
+
+  @NonNull
+  public final View notch;
 
   @NonNull
   public final ImageButton phoneApp;
@@ -68,19 +77,23 @@ public abstract class ActivityLauncherBinding extends ViewDataBinding {
 
   protected ActivityLauncherBinding(DataBindingComponent _bindingComponent, View _root,
       int _localFieldCount, LinearLayout appsListHolder, RecyclerView appsListRecycler,
-      LinearLayout buttonsHolder, ImageButton chromeApp, ImageButton contactApp,
-      ConstraintLayout container, ImageButton emailApp, LinearLayout gestureHolder,
-      ImageButton phoneApp, ImageButton smsApp, LinearLayout topPanel, LinearLayout weatherHolder,
-      ImageView weatherIcon, TextView weatherTag, ImageButton whatsApp) {
+      ImageButton arrowUp, LinearLayout buttonsHolder, ImageButton chromeApp,
+      ImageButton contactApp, ConstraintLayout container, ImageButton emailApp,
+      LinearLayout gestureHolder, TextView greetingText, View notch, ImageButton phoneApp,
+      ImageButton smsApp, LinearLayout topPanel, LinearLayout weatherHolder, ImageView weatherIcon,
+      TextView weatherTag, ImageButton whatsApp) {
     super(_bindingComponent, _root, _localFieldCount);
     this.appsListHolder = appsListHolder;
     this.appsListRecycler = appsListRecycler;
+    this.arrowUp = arrowUp;
     this.buttonsHolder = buttonsHolder;
     this.chromeApp = chromeApp;
     this.contactApp = contactApp;
     this.container = container;
     this.emailApp = emailApp;
     this.gestureHolder = gestureHolder;
+    this.greetingText = greetingText;
+    this.notch = notch;
     this.phoneApp = phoneApp;
     this.smsApp = smsApp;
     this.topPanel = topPanel;
