@@ -8,7 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         style="@style/Parent"
-        tools:context=".screens.mainactivity.activity.MainActivity">
+        tools:context=".screens.activities.MainActivity">
 
 
        <LinearLayout

@@ -1,0 +1,224 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/src/main/AndroidManifest.xml:2:1-35:12
+INJECTED from /Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/src/main/AndroidManifest.xml:2:1-35:12
+INJECTED from /Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/src/main/AndroidManifest.xml:2:1-35:12
+INJECTED from /Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/src/main/AndroidManifest.xml:2:1-35:12
+MERGED from [com.android.databinding:adapters:3.2.0] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/adapters-3.2.0.aar/ae24997076c13ca680bcfcba44e52ef4/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.databinding:library:3.2.0] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/library-3.2.0.aar/97b0fb1069560125c494fe1a6707c6fb/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:design:27.1.1] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/879ae7de90df763058fcb9d22b1f7280/AndroidManifest.xml:17:1-22:12
+MERGED from [com.trello:rxlifecycle-components:1.0] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/rxlifecycle-components-1.0.aar/3832a0f501910530de9c288cebc65b00/AndroidManifest.xml:13:1-19:12
+MERGED from [uk.co.chrisjenx:calligraphy:2.3.0] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/calligraphy-2.3.0.aar/900c16bb37030476f1d771efbbb3987e/AndroidManifest.xml:2:1-13:12
+MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/78ce7c185b3403d27b51d17f3ed5a92b/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/5093e7a4f5a166d7dde03eb4592dc53e/AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/4e4ff81228834d0cda311afd531c10f1/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/a43977c1410e62628b35bbe9a6a5fed4/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.gms:play-services-location:15.0.1] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/play-services-location-15.0.1.aar/d153de2a07571623c31e1c9f7a254a35/AndroidManifest.xml:2:1-9:12
+MERGED from [com.trello:rxlifecycle-android:1.0] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/rxlifecycle-android-1.0.aar/c03de1107af4c2026439c365decabb09/AndroidManifest.xml:13:1-19:12
+MERGED from [com.jakewharton.timber:timber:4.7.1] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/timber-4.7.1.aar/5409fe9bcc74d2eab400762e162c8393/AndroidManifest.xml:2:1-9:12
+MERGED from [android.arch.persistence.room:runtime:1.1.1] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/7d84995c9c8b567bbbf170367a0dbacf/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:recyclerview-v7:27.1.1] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.1.1.aar/84dfd6a0b6dd2bdaf262da5895dc669a/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:transition:27.1.1] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/transition-27.1.1.aar/a83ebcd57b06ec609f89d08ca168ad64/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.gms:play-services-base:15.0.1] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/5e9a007cd5eaa742fef2d8053bd465b4/AndroidManifest.xml:17:1-29:12
+MERGED from [com.google.android.gms:play-services-places-placereport:15.0.1] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/play-services-places-placereport-15.0.1.aar/96961b4bed35d3d0a7f626541faac530/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-tasks:15.0.1] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/play-services-tasks-15.0.1.aar/db8a936766eec237b33a17d6272b5564/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-basement:15.0.1] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/e7e4274ed08b45c425ae7312a720a9fb/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-v4:27.1.1] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/da33a685a1219f8ad0c6dc3f0c18333f/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:27.1.1] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/3d8a7a197c8f32da80220fcd55784e8d/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:27.1.1] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/3da831c957d9e3e2c213830fed0d0ed7/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:27.1.1] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/579ab3d86ee6b76f01e3d262fd9908b2/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:27.1.1] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/00210bfeff53b04ea438bd0e812c08a9/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.1.1] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/9bae4f840a2ccd9733fcaa8798f8b7af/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/e93bf608e7b5087804e9462f31e6313f/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.persistence:db-framework:1.1.1] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/db-framework-1.1.1.aar/ef5ff210d1c520123ab2254488cd42bf/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.persistence:db:1.1.1] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/db-1.1.1.aar/5e4380a69bd8b4e297b6f0fe14e63e99/AndroidManifest.xml:17:1-22:12
+MERGED from [com.jakewharton.rxbinding:rxbinding:0.4.0] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/rxbinding-0.4.0.aar/eab419f4ae29096ea4ec6503509b6828/AndroidManifest.xml:2:1-8:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/34467cf8be1254db173cf1d6fb98df4f/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.1] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/121482d3dc120edb1287f55ac2953865/AndroidManifest.xml:17:1-22:12
+MERGED from [io.reactivex:rxandroid:1.1.0] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/rxandroid-1.1.0.aar/0bf3aee4cd397a3b1ba6b1d5c17fb623/AndroidManifest.xml:15:1-21:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/a8570b1a5ab9b41e8aa1d01c4f13ab20/AndroidManifest.xml:17:1-22:12
+INJECTED from /Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/src/main/AndroidManifest.xml:2:1-35:12
+INJECTED from /Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/src/main/AndroidManifest.xml:2:1-35:12
+INJECTED from /Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/src/main/AndroidManifest.xml:2:1-35:12
+	package
+		ADDED from /Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/src/main/AndroidManifest.xml:3:5-46
+		INJECTED from /Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/src/main/AndroidManifest.xml
+		ADDED from /Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/src/main/AndroidManifest.xml:2:1-35:12
+		INJECTED from /Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/src/main/AndroidManifest.xml
+		ADDED from /Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/src/main/AndroidManifest.xml:2:1-35:12
+		INJECTED from /Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/src/main/AndroidManifest.xml:2:11-69
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from /Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/src/main/AndroidManifest.xml:5:5-80
+	android:name
+		ADDED from /Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/src/main/AndroidManifest.xml:5:22-78
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from /Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/src/main/AndroidManifest.xml:6:5-78
+	android:name
+		ADDED from /Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/src/main/AndroidManifest.xml:6:22-76
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from /Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/src/main/AndroidManifest.xml:7:5-78
+	android:name
+		ADDED from /Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/src/main/AndroidManifest.xml:7:22-76
+uses-permission#android.permission.INTERNET
+ADDED from /Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/src/main/AndroidManifest.xml:8:5-66
+	android:name
+		ADDED from /Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/src/main/AndroidManifest.xml:8:22-64
+application
+ADDED from /Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/src/main/AndroidManifest.xml:10:5-33:19
+MERGED from [uk.co.chrisjenx:calligraphy:2.3.0] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/calligraphy-2.3.0.aar/900c16bb37030476f1d771efbbb3987e/AndroidManifest.xml:11:5-20
+MERGED from [uk.co.chrisjenx:calligraphy:2.3.0] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/calligraphy-2.3.0.aar/900c16bb37030476f1d771efbbb3987e/AndroidManifest.xml:11:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/5093e7a4f5a166d7dde03eb4592dc53e/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/5093e7a4f5a166d7dde03eb4592dc53e/AndroidManifest.xml:9:5-20
+MERGED from [com.google.android.gms:play-services-location:15.0.1] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/play-services-location-15.0.1.aar/d153de2a07571623c31e1c9f7a254a35/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-location:15.0.1] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/play-services-location-15.0.1.aar/d153de2a07571623c31e1c9f7a254a35/AndroidManifest.xml:7:5-20
+MERGED from [com.jakewharton.timber:timber:4.7.1] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/timber-4.7.1.aar/5409fe9bcc74d2eab400762e162c8393/AndroidManifest.xml:7:5-20
+MERGED from [com.jakewharton.timber:timber:4.7.1] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/timber-4.7.1.aar/5409fe9bcc74d2eab400762e162c8393/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-base:15.0.1] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/5e9a007cd5eaa742fef2d8053bd465b4/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-base:15.0.1] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/5e9a007cd5eaa742fef2d8053bd465b4/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-places-placereport:15.0.1] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/play-services-places-placereport-15.0.1.aar/96961b4bed35d3d0a7f626541faac530/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-places-placereport:15.0.1] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/play-services-places-placereport-15.0.1.aar/96961b4bed35d3d0a7f626541faac530/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-tasks:15.0.1] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/play-services-tasks-15.0.1.aar/db8a936766eec237b33a17d6272b5564/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-tasks:15.0.1] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/play-services-tasks-15.0.1.aar/db8a936766eec237b33a17d6272b5564/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-basement:15.0.1] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/e7e4274ed08b45c425ae7312a720a9fb/AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:15.0.1] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/e7e4274ed08b45c425ae7312a720a9fb/AndroidManifest.xml:22:5-26:19
+	android:supportsRtl
+		ADDED from /Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/src/main/AndroidManifest.xml:16:9-35
+	android:label
+		ADDED from /Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/src/main/AndroidManifest.xml:14:9-41
+	android:roundIcon
+		ADDED from /Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/src/main/AndroidManifest.xml:15:9-54
+	android:icon
+		ADDED from /Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/src/main/AndroidManifest.xml:13:9-43
+	android:allowBackup
+		ADDED from /Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/src/main/AndroidManifest.xml:12:9-35
+	android:theme
+		ADDED from /Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/src/main/AndroidManifest.xml:17:9-52
+	android:name
+		ADDED from /Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/src/main/AndroidManifest.xml:11:9-45
+activity#android.heimdallr.app.heimdallr.screens.activities.LauncherActivity
+ADDED from /Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/src/main/AndroidManifest.xml:19:9-32:20
+	android:label
+		ADDED from /Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/src/main/AndroidManifest.xml:21:13-45
+	android:launchMode
+		ADDED from /Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/src/main/AndroidManifest.xml:22:13-44
+	android:name
+		ADDED from /Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/src/main/AndroidManifest.xml:20:13-64
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.DEFAULT+category:name:android.intent.category.HOME+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/src/main/AndroidManifest.xml:25:13-31:29
+action#android.intent.action.MAIN
+ADDED from /Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/src/main/AndroidManifest.xml:26:17-69
+	android:name
+		ADDED from /Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/src/main/AndroidManifest.xml:26:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/src/main/AndroidManifest.xml:28:17-77
+	android:name
+		ADDED from /Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/src/main/AndroidManifest.xml:28:27-74
+category#android.intent.category.HOME
+ADDED from /Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/src/main/AndroidManifest.xml:29:17-73
+	android:name
+		ADDED from /Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/src/main/AndroidManifest.xml:29:27-70
+category#android.intent.category.DEFAULT
+ADDED from /Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/src/main/AndroidManifest.xml:30:17-76
+	android:name
+		ADDED from /Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/src/main/AndroidManifest.xml:30:27-73
+uses-sdk
+INJECTED from /Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/src/main/AndroidManifest.xml
+INJECTED from /Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/src/main/AndroidManifest.xml
+MERGED from [com.android.databinding:adapters:3.2.0] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/adapters-3.2.0.aar/ae24997076c13ca680bcfcba44e52ef4/AndroidManifest.xml:22:5-44
+MERGED from [com.android.databinding:adapters:3.2.0] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/adapters-3.2.0.aar/ae24997076c13ca680bcfcba44e52ef4/AndroidManifest.xml:22:5-44
+MERGED from [com.android.databinding:library:3.2.0] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/library-3.2.0.aar/97b0fb1069560125c494fe1a6707c6fb/AndroidManifest.xml:22:5-44
+MERGED from [com.android.databinding:library:3.2.0] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/library-3.2.0.aar/97b0fb1069560125c494fe1a6707c6fb/AndroidManifest.xml:22:5-44
+MERGED from [com.android.support:design:27.1.1] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/879ae7de90df763058fcb9d22b1f7280/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:27.1.1] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/879ae7de90df763058fcb9d22b1f7280/AndroidManifest.xml:20:5-44
+MERGED from [com.trello:rxlifecycle-components:1.0] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/rxlifecycle-components-1.0.aar/3832a0f501910530de9c288cebc65b00/AndroidManifest.xml:17:5-44
+MERGED from [com.trello:rxlifecycle-components:1.0] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/rxlifecycle-components-1.0.aar/3832a0f501910530de9c288cebc65b00/AndroidManifest.xml:17:5-44
+MERGED from [uk.co.chrisjenx:calligraphy:2.3.0] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/calligraphy-2.3.0.aar/900c16bb37030476f1d771efbbb3987e/AndroidManifest.xml:7:5-9:41
+MERGED from [uk.co.chrisjenx:calligraphy:2.3.0] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/calligraphy-2.3.0.aar/900c16bb37030476f1d771efbbb3987e/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/78ce7c185b3403d27b51d17f3ed5a92b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/78ce7c185b3403d27b51d17f3ed5a92b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/5093e7a4f5a166d7dde03eb4592dc53e/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/5093e7a4f5a166d7dde03eb4592dc53e/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/4e4ff81228834d0cda311afd531c10f1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/4e4ff81228834d0cda311afd531c10f1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/a43977c1410e62628b35bbe9a6a5fed4/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/a43977c1410e62628b35bbe9a6a5fed4/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-location:15.0.1] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/play-services-location-15.0.1.aar/d153de2a07571623c31e1c9f7a254a35/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-location:15.0.1] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/play-services-location-15.0.1.aar/d153de2a07571623c31e1c9f7a254a35/AndroidManifest.xml:5:5-44
+MERGED from [com.trello:rxlifecycle-android:1.0] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/rxlifecycle-android-1.0.aar/c03de1107af4c2026439c365decabb09/AndroidManifest.xml:17:5-44
+MERGED from [com.trello:rxlifecycle-android:1.0] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/rxlifecycle-android-1.0.aar/c03de1107af4c2026439c365decabb09/AndroidManifest.xml:17:5-44
+MERGED from [com.jakewharton.timber:timber:4.7.1] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/timber-4.7.1.aar/5409fe9bcc74d2eab400762e162c8393/AndroidManifest.xml:5:5-43
+MERGED from [com.jakewharton.timber:timber:4.7.1] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/timber-4.7.1.aar/5409fe9bcc74d2eab400762e162c8393/AndroidManifest.xml:5:5-43
+MERGED from [android.arch.persistence.room:runtime:1.1.1] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/7d84995c9c8b567bbbf170367a0dbacf/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.persistence.room:runtime:1.1.1] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/7d84995c9c8b567bbbf170367a0dbacf/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.1.1] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.1.1.aar/84dfd6a0b6dd2bdaf262da5895dc669a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.1.1] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.1.1.aar/84dfd6a0b6dd2bdaf262da5895dc669a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.1.1] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/transition-27.1.1.aar/a83ebcd57b06ec609f89d08ca168ad64/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.1.1] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/transition-27.1.1.aar/a83ebcd57b06ec609f89d08ca168ad64/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:15.0.1] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/5e9a007cd5eaa742fef2d8053bd465b4/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:15.0.1] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/5e9a007cd5eaa742fef2d8053bd465b4/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-places-placereport:15.0.1] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/play-services-places-placereport-15.0.1.aar/96961b4bed35d3d0a7f626541faac530/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-places-placereport:15.0.1] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/play-services-places-placereport-15.0.1.aar/96961b4bed35d3d0a7f626541faac530/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-tasks:15.0.1] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/play-services-tasks-15.0.1.aar/db8a936766eec237b33a17d6272b5564/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:15.0.1] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/play-services-tasks-15.0.1.aar/db8a936766eec237b33a17d6272b5564/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-basement:15.0.1] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/e7e4274ed08b45c425ae7312a720a9fb/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:15.0.1] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/e7e4274ed08b45c425ae7312a720a9fb/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.1.1] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/da33a685a1219f8ad0c6dc3f0c18333f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.1.1] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/da33a685a1219f8ad0c6dc3f0c18333f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/3d8a7a197c8f32da80220fcd55784e8d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/3d8a7a197c8f32da80220fcd55784e8d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/3da831c957d9e3e2c213830fed0d0ed7/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/3da831c957d9e3e2c213830fed0d0ed7/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/579ab3d86ee6b76f01e3d262fd9908b2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/579ab3d86ee6b76f01e3d262fd9908b2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/00210bfeff53b04ea438bd0e812c08a9/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/00210bfeff53b04ea438bd0e812c08a9/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/9bae4f840a2ccd9733fcaa8798f8b7af/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/9bae4f840a2ccd9733fcaa8798f8b7af/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/e93bf608e7b5087804e9462f31e6313f/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/e93bf608e7b5087804e9462f31e6313f/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.persistence:db-framework:1.1.1] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/db-framework-1.1.1.aar/ef5ff210d1c520123ab2254488cd42bf/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.persistence:db-framework:1.1.1] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/db-framework-1.1.1.aar/ef5ff210d1c520123ab2254488cd42bf/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.persistence:db:1.1.1] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/db-1.1.1.aar/5e4380a69bd8b4e297b6f0fe14e63e99/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.persistence:db:1.1.1] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/db-1.1.1.aar/5e4380a69bd8b4e297b6f0fe14e63e99/AndroidManifest.xml:20:5-44
+MERGED from [com.jakewharton.rxbinding:rxbinding:0.4.0] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/rxbinding-0.4.0.aar/eab419f4ae29096ea4ec6503509b6828/AndroidManifest.xml:6:5-44
+MERGED from [com.jakewharton.rxbinding:rxbinding:0.4.0] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/rxbinding-0.4.0.aar/eab419f4ae29096ea4ec6503509b6828/AndroidManifest.xml:6:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/34467cf8be1254db173cf1d6fb98df4f/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/34467cf8be1254db173cf1d6fb98df4f/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/121482d3dc120edb1287f55ac2953865/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/121482d3dc120edb1287f55ac2953865/AndroidManifest.xml:20:5-44
+MERGED from [io.reactivex:rxandroid:1.1.0] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/rxandroid-1.1.0.aar/0bf3aee4cd397a3b1ba6b1d5c17fb623/AndroidManifest.xml:19:5-43
+MERGED from [io.reactivex:rxandroid:1.1.0] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/rxandroid-1.1.0.aar/0bf3aee4cd397a3b1ba6b1d5c17fb623/AndroidManifest.xml:19:5-43
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/a8570b1a5ab9b41e8aa1d01c4f13ab20/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/a8570b1a5ab9b41e8aa1d01c4f13ab20/AndroidManifest.xml:20:5-44
+INJECTED from /Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/src/main/AndroidManifest.xml
+INJECTED from /Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/src/main/AndroidManifest.xml
+		ADDED from /Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/src/main/AndroidManifest.xml
+		ADDED from /Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/src/main/AndroidManifest.xml
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:15.0.1] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/5e9a007cd5eaa742fef2d8053bd465b4/AndroidManifest.xml:23:9-26:75
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:15.0.1] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/5e9a007cd5eaa742fef2d8053bd465b4/AndroidManifest.xml:25:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:15.0.1] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/5e9a007cd5eaa742fef2d8053bd465b4/AndroidManifest.xml:26:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:15.0.1] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/5e9a007cd5eaa742fef2d8053bd465b4/AndroidManifest.xml:24:13-79
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:15.0.1] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/e7e4274ed08b45c425ae7312a720a9fb/AndroidManifest.xml:23:9-25:69
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:15.0.1] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/e7e4274ed08b45c425ae7312a720a9fb/AndroidManifest.xml:25:13-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:15.0.1] /Users/knightbenax/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/e7e4274ed08b45c425ae7312a720a9fb/AndroidManifest.xml:24:13-58

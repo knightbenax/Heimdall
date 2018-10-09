@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_main.xml",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/src/main/res/layout/activity_main.xml"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_launcher.xml",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/src/main/res/layout/activity_launcher.xml"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/layout_single_app.xml",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/src/main/res/layout/layout_single_app.xml"
+    }
+]

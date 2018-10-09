@@ -6,4 +6,6 @@
     <string name="about">About</string>
     <string name="unlock">Unlock</string>
     <string name="scan_fingerprint_to_unlock_mac">Scan fingerprint to unlock Mac</string>
+    <string name="afternoon_bezaleel">Afternoon, Bezaleel</string>
+    <string name="app_logo">App Logo</string>
 </resources>

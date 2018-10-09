@@ -1,0 +1,619 @@
+package android.heimdallr.app.heimdallr.screens.activities;
+
+import android.animation.Animator;
+import android.annotation.SuppressLint;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.databinding.DataBindingUtil;
+import android.heimdallr.app.heimdallr.BuildConfig;
+import android.heimdallr.app.heimdallr.HeimdallrApplication;
+import android.heimdallr.app.heimdallr.R;
+import android.heimdallr.app.heimdallr.core.api.models.WeatherResponse;
+import android.heimdallr.app.heimdallr.core.daggger.components.AppMainComponent;
+import android.heimdallr.app.heimdallr.core.models.App;
+import android.heimdallr.app.heimdallr.core.permissions.PermissionsManager;
+import android.heimdallr.app.heimdallr.core.utils.HeimdallrState;
+import android.heimdallr.app.heimdallr.core.viewadapters.AppsAdapter;
+import android.heimdallr.app.heimdallr.core.views.CoreActivity;
+import android.heimdallr.app.heimdallr.databinding.ActivityLauncherBinding;
+import android.heimdallr.app.heimdallr.screens.viewmodels.LauncherActivityViewModel;
+import android.location.Location;
+import android.os.Bundle;
+import android.support.constraint.ConstraintSet;
+import android.support.v4.view.GestureDetectorCompat;
+import android.support.v4.view.MotionEventCompat;
+import android.support.v4.view.animation.FastOutSlowInInterpolator;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.text.Html;
+import android.transition.TransitionManager;
+import android.util.DisplayMetrics;
+import android.util.Log;
+import android.view.GestureDetector;
+import android.view.MotionEvent;
+import android.view.ScaleGestureDetector;
+import android.view.View;
+import android.view.animation.AccelerateInterpolator;
+import android.view.animation.DecelerateInterpolator;
+import android.widget.Toast;
+
+import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.tasks.OnSuccessListener;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.IOException;
+import java.security.Permission;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+
+import javax.inject.Inject;
+
+import okhttp3.ResponseBody;
+import retrofit2.Response;
+import rx.Observer;
+
+import static android.heimdallr.app.heimdallr.core.permissions.PermissionsManager.LOCATION_PERMISSION_REQUEST_CODE;
+
+public class LauncherActivity extends CoreActivity{
+
+
+    private static final int INVALID_POINTER_ID = 5000;
+
+    @Inject
+    LauncherActivityViewModel launcherActivityViewModel;
+
+    PermissionsManager permissionsManager;
+
+    AppMainComponent component;
+    ActivityLauncherBinding activityLauncherBinding;
+
+    private String UNIVERSAL_ERROR_STRING = "Something went wrong. Heimdallr couldn't process the request";
+    AppsAdapter appsAdapter;
+    GestureDetectorCompat gestureDetector;
+
+    boolean fetchApps = false;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        activityLauncherBinding = DataBindingUtil.setContentView(this, R.layout.activity_launcher);
+        component = HeimdallrApplication.get(this).getComponent();
+        component.inject(this);
+
+        launcherActivityViewModel.setLauncherActivity(this);
+        launcherActivityViewModel.setUiModelInstance(this);
+        activityLauncherBinding.setModel(launcherActivityViewModel.getUiModel());
+
+        initPermissionsManager();
+        initGestureListener();
+    }
+
+
+
+    @Override
+    public void onBackPressed(){
+        if (HeimdallrState.getInstance().getCurrentScreen().equals(HeimdallrState.DRAWER)){
+            closeDrawer();
+        } else {
+            super.onBackPressed();
+        }
+    }
+
+    private void initPermissionsManager() {
+        permissionsManager = new PermissionsManager(this);
+        //checkLocationPermission();
+    }
+
+    private void initGestureListener() {
+        mScaleDetector = new ScaleGestureDetector(this, new ScaleGestureDetector.SimpleOnScaleGestureListener());
+
+        DisplayMetrics displayMetrics = new DisplayMetrics();
+        getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
+        height = displayMetrics.heightPixels;
+        width = displayMetrics.widthPixels;
+        activityLauncherBinding.appsListRecycler.setTranslationY(height);
+        mPosX = width; mPosY = height;
+    }
+
+    private void setUpRecycler(List<App> appsList){
+        appsAdapter = new AppsAdapter(this);
+        appsAdapter.setAppList(appsList);
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 5);
+        activityLauncherBinding.appsListRecycler.setAdapter(appsAdapter);
+        activityLauncherBinding.appsListRecycler.setLayoutManager(gridLayoutManager);
+        activityLauncherBinding.appsListRecycler.setHasFixedSize(true);
+        fetchApps = true;
+
+        activityLauncherBinding.appsListRecycler.addOnScrollListener(new RecyclerView.OnScrollListener() {
+            @Override
+            public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
+                if (!activityLauncherBinding.appsListRecycler.canScrollVertically(-1)){
+                    //closeDrawer();
+                }
+                super.onScrolled(recyclerView, dx, dy);
+            }
+        });
+    }
+
+    @Override
+    public void onPause(){
+        closeDrawer();
+        super.onPause();
+    }
+
+    @Override
+    public void onResume(){
+        getApps();
+        getLocation();
+        super.onResume();
+    }
+
+    private void closeDrawer(){
+        Log.e("Close", "yes");
+        ConstraintSet constraintSet = new ConstraintSet();
+        constraintSet.clone(activityLauncherBinding.container);
+        constraintSet.clear(activityLauncherBinding.appsListRecycler.getId(), ConstraintSet.TOP);
+        constraintSet.connect(activityLauncherBinding.appsListRecycler.getId(), ConstraintSet.TOP, activityLauncherBinding.container.getId(), ConstraintSet.BOTTOM);
+        TransitionManager.beginDelayedTransition(activityLauncherBinding.container);
+        constraintSet.applyTo(activityLauncherBinding.container);
+
+        setVisibility(activityLauncherBinding.gestureHolder, View.VISIBLE);
+        setVisibility(activityLauncherBinding.buttonsHolder, View.VISIBLE);
+        setVisibility(activityLauncherBinding.topPanel, View.VISIBLE);
+        //activityLauncherBinding.appsListRecycler.scrollToPosition(0);
+        activityLauncherBinding.appsListRecycler.invalidate();
+        //setVisibility(activityLauncherBinding.appsListRecycler, View.GONE);
+
+        HeimdallrState.getInstance().setCurrentScreen(HeimdallrState.HOME);
+        setLightStatusBar(false);
+    }
+
+
+    // The ‘active pointer’ is the one currently moving our object.
+    private int mActivePointerId = INVALID_POINTER_ID;
+    private ScaleGestureDetector mScaleDetector;
+    float mLastTouchX = 0, mLastTouchY = 0, mPosX = 0, mPosY = 0, mDx = 0, mDy = 0;
+    int height = 0, width = 0;
+    boolean startMoving = false;
+
+    @Override
+    public boolean onTouchEvent(MotionEvent ev) {
+        // Let the ScaleGestureDetector inspect all events.
+        mScaleDetector.onTouchEvent(ev);
+
+        final int action = MotionEventCompat.getActionMasked(ev);
+
+        switch (action) {
+            case MotionEvent.ACTION_DOWN: {
+                final int pointerIndex = MotionEventCompat.getActionIndex(ev);
+                final float x = MotionEventCompat.getX(ev, pointerIndex);
+                final float y = MotionEventCompat.getY(ev, pointerIndex);
+
+                // Remember where we started (for dragging)
+                mLastTouchX = x;
+                mLastTouchY = y;
+                // Save the ID of this pointer (for dragging)
+                mActivePointerId = MotionEventCompat.getPointerId(ev, 0);
+                break;
+            }
+
+            case MotionEvent.ACTION_MOVE: {
+                // Find the index of the active pointer and fetch its position
+                final int pointerIndex =
+                        MotionEventCompat.findPointerIndex(ev, mActivePointerId);
+
+                final float x = MotionEventCompat.getX(ev, pointerIndex);
+                final float y = MotionEventCompat.getY(ev, pointerIndex);
+
+                // Calculate the distance moved
+                final float dx = x - mLastTouchX;
+                final float dy = y - mLastTouchY;
+
+                //mDx = dx;
+                //mDy = dy;
+
+                mPosX += dx;
+                mPosY += dy;
+
+                mDx = mPosY;
+                mDy = mPosY;
+
+                //setVisibility(activityLauncherBinding.appsListHolder, View.VISIBLE);
+                float alphaValue = (mPosY / height) * 1;
+                alphaValue = 1 - alphaValue;
+                //Log.e("Alpha", String.valueOf(alphaValue));
+                activityLauncherBinding.appsListHolder.setAlpha(alphaValue);
+                activityLauncherBinding.appsListRecycler.setTranslationY(mPosY);
+                //Log.e("Pointer", String.valueOf(mPosY));
+                //Log.e("Pointer", String.valueOf(mActivePointerId));
+                //Remember this touch position for the next move event
+                mLastTouchX = x;
+                mLastTouchY = y;
+                break;
+            }
+
+            case MotionEvent.ACTION_UP: {
+                mActivePointerId = INVALID_POINTER_ID;
+
+                Log.e("DoneY", String.valueOf(mDy));
+                float finalFingerPosition = mDy;
+                float halfHeight = height / 2;
+                mDy = mPosY - mLastTouchY;
+                Log.e("Done", "Yes");
+                Log.e("DoneY", String.valueOf(mDy));
+
+                float value = Math.abs(mDy);
+
+                if (value > 10){
+                    if (finalFingerPosition < halfHeight){
+                        //the finger ended up in the top part of the screen.
+                        //Check if the difference is much and swipe up;
+                        moveViewToTop();
+                    } else if (finalFingerPosition >= halfHeight){
+                        //the finger ended in the bottom, so move down
+                        Log.e("Height", String.valueOf(height));
+                        activityLauncherBinding.appsListHolder.animate().alpha(0).setDuration(80).setInterpolator(new AccelerateInterpolator());
+                        activityLauncherBinding.appsListRecycler.animate().translationY(height).setDuration(100).setListener(new Animator.AnimatorListener() {
+                            @Override
+                            public void onAnimationStart(Animator animator) {
+
+                            }
+
+                            @Override
+                            public void onAnimationEnd(Animator animator) {
+                                //setVisibility(activityLauncherBinding.appsListRecycler, View.GONE);
+                            }
+
+                            @Override
+                            public void onAnimationCancel(Animator animator) {
+
+                            }
+
+                            @Override
+                            public void onAnimationRepeat(Animator animator) {
+
+                            }
+                        });
+                        //set mPosY back to the height;
+                        mPosY = height;
+                    }
+                }
+
+                //mDx = mPosY;
+
+                /*if (mDy < 0){
+                    //this is a swipe up. Move view up.
+                    //float value = Math.abs(mDy);
+                    Log.e("Done", String.valueOf(value));
+                    if (value > 10){
+                        moveViewToTop();
+                    } else {
+                        Log.e("Height", String.valueOf(height));
+                        activityLauncherBinding.appsListHolder.animate().alpha(0).setDuration(80).setInterpolator(new AccelerateInterpolator());
+                        activityLauncherBinding.appsListRecycler.animate().translationY(height).setDuration(100).setListener(new Animator.AnimatorListener() {
+                            @Override
+                            public void onAnimationStart(Animator animator) {
+
+                            }
+
+                            @Override
+                            public void onAnimationEnd(Animator animator) {
+                                //setVisibility(activityLauncherBinding.appsListRecycler, View.GONE);
+                            }
+
+                            @Override
+                            public void onAnimationCancel(Animator animator) {
+
+                            }
+
+                            @Override
+                            public void onAnimationRepeat(Animator animator) {
+
+                            }
+                        });
+                        //set mPosY back to the height;
+                        mPosY = height;
+                    }
+                } else if (mDy > 0){
+                    //this is a swipe down. Move view up.
+                }*/
+                break;
+            }
+
+            case MotionEvent.ACTION_CANCEL: {
+                mActivePointerId = INVALID_POINTER_ID;
+                break;
+            }
+
+            case MotionEvent.ACTION_POINTER_UP: {
+
+                final int pointerIndex = MotionEventCompat.getActionIndex(ev);
+                final int pointerId = MotionEventCompat.getPointerId(ev, pointerIndex);
+
+                Log.e("Pointer Done", "Yes");
+
+                if (pointerId == mActivePointerId) {
+                    // This was our active pointer going up. Choose a new
+                    // active pointer and adjust accordingly.
+                    final int newPointerIndex = pointerIndex == 0 ? 1 : 0;
+                    mLastTouchX = MotionEventCompat.getX(ev, newPointerIndex);
+                    mLastTouchY = MotionEventCompat.getY(ev, newPointerIndex);
+                    mActivePointerId = MotionEventCompat.getPointerId(ev, newPointerIndex);
+                }
+                break;
+            }
+        }
+        return true;
+    }
+
+    private void moveViewToTop(){
+        setVisibility(activityLauncherBinding.appsListRecycler, View.VISIBLE);
+        //activityLauncherBinding.appsListHolder.
+        activityLauncherBinding.appsListHolder.animate().alpha(1).setDuration(80).setInterpolator(new AccelerateInterpolator());
+        activityLauncherBinding.appsListRecycler.animate().translationY(0).setDuration(80).setInterpolator(new FastOutSlowInInterpolator()).setListener(null);
+        HeimdallrState.getInstance().setCurrentScreen(HeimdallrState.DRAWER);
+        setLightStatusBar(true);
+
+        ConstraintSet constraintSet = new ConstraintSet();
+        constraintSet.clone(activityLauncherBinding.container);
+        TransitionManager.beginDelayedTransition(activityLauncherBinding.container);
+        constraintSet.applyTo(activityLauncherBinding.container);
+
+        setVisibility(activityLauncherBinding.gestureHolder, View.GONE);
+        setVisibility(activityLauncherBinding.buttonsHolder, View.GONE);
+        setVisibility(activityLauncherBinding.topPanel, View.GONE);
+        setVisibility(activityLauncherBinding.appsListRecycler, View.VISIBLE);
+    }
+
+    private void setVisibility(View view, int visibility){
+        view.setVisibility(visibility);
+    }
+
+    private int getVisibility(View view){
+        return view.getVisibility();
+    }
+
+    private void getApps(){
+        launcherActivityViewModel.getAppsThread().subscribe(new Observer<List<App>>() {
+            @Override
+            public void onCompleted() {
+            }
+
+            @Override
+            public void onError(Throwable e) {
+                e.printStackTrace();
+                Log.e("Apps Error", e.getMessage());
+            }
+
+            @Override
+            public void onNext(final List<App> apps) {
+
+                Collections.sort(apps, new Comparator<App>() {
+                    @Override
+                    public int compare(App s1, App s2) {
+                        return s1.getName().compareToIgnoreCase(s2.getName());
+                    }
+                });
+
+                if (fetchApps){
+                   runOnUiThread(new Runnable() {
+                       @Override
+                       public void run() {
+                           appsAdapter.setAppList(apps);
+                           appsAdapter.notifyDataSetChanged();
+                       }
+                   });
+                } else {
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            setUpRecycler(apps);
+                        }
+                    });
+                }
+            }
+        });
+    }
+
+    @SuppressLint("MissingPermission")
+    private void getLocation(){
+        //Log.e("Get", "Location");
+        if (permissionsManager.checkPermissionForLocation()){
+            FusedLocationProviderClient mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
+
+            mFusedLocationClient.getLastLocation().addOnSuccessListener(this, new OnSuccessListener<Location>() {
+                @Override
+                public void onSuccess(Location location) {
+                    // Got last known location. In some rare situations this can be null.
+                    if (location != null) {
+                        setWeather(location);
+                        Log.e("Find Location", "Yes");
+                        // Logic to handle location object
+                    }
+                }
+            });
+        } else {
+            permissionsManager.requestPermissionForLocation();
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String[] permission, int[] grantResult){
+        super.onRequestPermissionsResult(requestCode, permission, grantResult);
+           switch (requestCode){
+               case LOCATION_PERMISSION_REQUEST_CODE:
+                   if (grantResult.length > 0 && grantResult[0] == PackageManager.PERMISSION_GRANTED){
+                       getLocation();
+                   }
+                   break;
+           }
+    }
+
+    @SuppressLint("NewApi")
+    private void setWeather(Location location){
+        launcherActivityViewModel.getWeather(String.valueOf(location.getLatitude()), String.valueOf(location.getLongitude()), BuildConfig.WeatherAPIKey, "metric").subscribe(new Observer<Response<WeatherResponse>>() {
+            @Override
+            public void onCompleted() {
+
+            }
+
+            @Override
+            public void onError(Throwable e) {
+                e.printStackTrace();
+                //Log.e("Find Location", e.getMessage());
+            }
+
+            @Override
+            public void onNext(Response<WeatherResponse> weatherResponseResponse) {
+                int responseCode = weatherResponseResponse.code();
+                //Log.e("Response", String.valueOf(responseCode));
+                switch (responseCode){
+                    case 200:
+                        String temp = weatherResponseResponse.body().getMain().getTemp().toString();
+                        //activityLauncherBinding.weatherTag.setText(Html.fromHtml(temp + "<sup>°</sup>C", 0));
+                        activityLauncherBinding.weatherTag.setText(temp + "°C");
+                        //Log.e("Temp", temp);
+                        setWeatherIcon(weatherResponseResponse.body().getWeather().get(0).getId());
+                        setVisibility(activityLauncherBinding.weatherHolder, View.VISIBLE);
+                        break;
+                }
+            }
+        });
+    }
+
+
+    public static boolean isBetween(int x, int lower, int upper) {
+        return lower <= x && x <= upper;
+    }
+
+    private void setWeatherIcon(int weatherIcon){
+        //Log.e("Icon", String.valueOf(weatherIcon));
+        if (isBetween(weatherIcon, 200, 232)) {
+            //RAIN AND THUNDERSTORM
+            activityLauncherBinding.weatherIcon.setImageDrawable(getResources().getDrawable(R.drawable.thunderstorm));
+        } else if (isBetween(weatherIcon, 300, 321)) {
+            //DRIZZLE
+            activityLauncherBinding.weatherIcon.setImageDrawable(getResources().getDrawable(R.drawable.drizzle));
+        } else if (isBetween(weatherIcon, 500, 522)) {
+            //RAIN
+            activityLauncherBinding.weatherIcon.setImageDrawable(getResources().getDrawable(R.drawable.rain));
+        } else if (isBetween(weatherIcon, 600, 621)) {
+            //SNOW
+            activityLauncherBinding.weatherIcon.setImageDrawable(getResources().getDrawable(R.drawable.snow));
+        } else if (isBetween(weatherIcon, 701, 741)) {
+            //MIST
+            activityLauncherBinding.weatherIcon.setImageDrawable(getResources().getDrawable(R.drawable.mist));
+        } else if (weatherIcon == 800) {
+            //CLOUDS_CLEAR
+            if (launcherActivityViewModel.getUiModel().getInternal_greeting() == 2){
+                activityLauncherBinding.weatherIcon.setImageDrawable(getResources().getDrawable(R.drawable.moon));
+            } else {
+                activityLauncherBinding.weatherIcon.setImageDrawable(getResources().getDrawable(R.drawable.sun));
+            }
+        } else if (isBetween(weatherIcon, 801, 803)) {
+            //CLOUDS
+            if (launcherActivityViewModel.getUiModel().getInternal_greeting() == 2){
+                activityLauncherBinding.weatherIcon.setImageDrawable(getResources().getDrawable(R.drawable.cloud_moon));
+            } else {
+                activityLauncherBinding.weatherIcon.setImageDrawable(getResources().getDrawable(R.drawable.clouds_sun));
+            }
+        } else if (weatherIcon == 804){
+            activityLauncherBinding.weatherIcon.setImageDrawable(getResources().getDrawable(R.drawable.clouds_few));
+        }
+
+    }
+
+    /*@Override
+    public boolean onFling(MotionEvent motionEvent1, MotionEvent motionEvent2, float X, float Y) {
+        //Toast.makeText(LauncherActivity.this, "You Swiped!", Toast.LENGTH_LONG).show();
+        //Log.e("Swipe", "Yes");
+        if (motionEvent1.getY() - motionEvent2.getY() > 20) {
+            //Toast.makeText(this, "You Swiped up!", Toast.LENGTH_LONG).show();
+            openDrawer();
+            return true;
+        }
+
+        if (motionEvent2.getY() - motionEvent1.getY() > 20) {
+            //Toast.makeText(this, "You Swiped Down!", Toast.LENGTH_LONG).show();
+            //closeDrawer();
+            return true;
+        }
+
+        if (motionEvent1.getX() - motionEvent2.getX() > 50) {
+            //Toast.makeText(MainActivity.this, "You Swiped Left!", Toast.LENGTH_LONG).show();
+            return true;
+        }
+
+        if (motionEvent2.getX() - motionEvent1.getX() > 50) {
+            //Toast.makeText(MainActivity.this, "You Swiped Right!", Toast.LENGTH_LONG).show();
+            return true;
+        } else {
+            return true;
+        }
+    }
+
+    @Override
+    public void onLongPress(MotionEvent arg0) {
+        // TODO Auto-generated method stub
+    }
+
+    @Override
+    public boolean onScroll(MotionEvent arg0, MotionEvent arg1, float arg2, float arg3) {
+        // TODO Auto-generated method stub
+        return false;
+    }
+
+    @Override
+    public void onShowPress(MotionEvent arg0) {
+        // TODO Auto-generated method stub
+    }
+
+    @Override
+    public boolean onSingleTapUp(MotionEvent arg0) {
+        // TODO Auto-generated method stub
+        return false;
+    }
+
+    @Override
+    public boolean onTouchEvent(MotionEvent motionEvent) {
+        // TODO Auto-generated method stub
+        gestureDetector.onTouchEvent(motionEvent);
+        return true;
+    }
+
+    @Override
+    public boolean onDown(MotionEvent arg0) {
+        // TODO Auto-generated method stub
+        return false;
+    }*/
+
+
+    /**
+     * This hombre helps us to filter messages from the errorbody
+     * **/
+    private String getErrorMessageFromStream(ResponseBody errorResponse){
+        String message;
+
+        try {
+            message = errorResponse.string();
+        } catch (IOException e) {
+            message = UNIVERSAL_ERROR_STRING;
+            e.printStackTrace();
+        }
+
+        JSONObject mainObject;
+        try {
+            mainObject = new JSONObject(message);
+            message = mainObject.getString("message");
+        } catch (JSONException e) {
+            message = UNIVERSAL_ERROR_STRING;
+            e.printStackTrace();
+        }
+
+        return message;
+    }
+}
