@@ -4,7 +4,17 @@
             "outputFile": "/Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v24/values-v24.xml",
             "map": [
                 {
-                    "source": "/Users/knightbenax/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/00210bfeff53b04ea438bd0e812c08a9/res/values-v24/values-v24.xml",
+                    "source": "/Users/knightbenax/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/53a5ff5413ce3e7e99056ae318314a2c/res/values-v24/values-v24.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,212",
+                        "endColumns": "156,134",
+                        "endOffsets": "207,342"
+                    }
+                },
+                {
+                    "source": "/Users/knightbenax/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/4120cffddff0bd1163802adade5bb01a/res/values-v24/values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
@@ -18,16 +28,6 @@
                         "startOffsets": "347,413,474,540",
                         "endColumns": "65,60,65,66",
                         "endOffsets": "408,469,535,602"
-                    }
-                },
-                {
-                    "source": "/Users/knightbenax/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/78ce7c185b3403d27b51d17f3ed5a92b/res/values-v24/values-v24.xml",
-                    "from": {
-                        "startLines": "2,3",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,212",
-                        "endColumns": "156,134",
-                        "endOffsets": "207,342"
                     }
                 }
             ]

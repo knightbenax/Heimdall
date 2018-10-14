@@ -4,7 +4,7 @@
             "outputFile": "/Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ta/values-ta.xml",
             "map": [
                 {
-                    "source": "/Users/knightbenax/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/e7e4274ed08b45c425ae7312a720a9fb/res/values-ta/values.xml",
+                    "source": "/Users/knightbenax/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/7ad07c414397dcfe0065f726a77d7a35/res/values-ta/values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "/Users/knightbenax/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/78ce7c185b3403d27b51d17f3ed5a92b/res/values-ta/values-ta.xml",
+                    "source": "/Users/knightbenax/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/53a5ff5413ce3e7e99056ae318314a2c/res/values-ta/values-ta.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -38,24 +38,7 @@
                     }
                 },
                 {
-                    "source": "/Users/knightbenax/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/9bae4f840a2ccd9733fcaa8798f8b7af/res/values-ta/values-ta.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "38",
-                        "startColumns": "4",
-                        "startOffsets": "4690",
-                        "endColumns": "100",
-                        "endOffsets": "4786"
-                    }
-                },
-                {
-                    "source": "/Users/knightbenax/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/5e9a007cd5eaa742fef2d8053bd465b4/res/values-ta/values.xml",
+                    "source": "/Users/knightbenax/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/b835cdfe75ed61381329d17d515044a4/res/values-ta/values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -69,6 +52,23 @@
                         "startOffsets": "1877,1984,2168,2297,2405,2616,2746,2889,3244,3486,3595,3779,3916,4129,4315,4407,4500",
                         "endColumns": "106,183,128,107,210,129,142,129,241,108,183,136,212,185,91,92,109",
                         "endOffsets": "1979,2163,2292,2400,2611,2741,2884,3014,3481,3590,3774,3911,4124,4310,4402,4495,4605"
+                    }
+                },
+                {
+                    "source": "/Users/knightbenax/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/c41081821c272822e5c045d9bc254d30/res/values-ta/values-ta.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "38",
+                        "startColumns": "4",
+                        "startOffsets": "4690",
+                        "endColumns": "100",
+                        "endOffsets": "4786"
                     }
                 }
             ]

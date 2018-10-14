@@ -1,5 +1,6 @@
 package android.heimdallr.app.heimdallr.screens.activities;
 
+import android.animation.Animator;
 import android.annotation.SuppressLint;
 import android.content.pm.PackageManager;
 import android.databinding.DataBindingUtil;
@@ -309,7 +310,7 @@ public class LauncherActivity extends CoreActivity{
 
                 float value = Math.abs(mDy);
 
-                if (value > 300){
+                if (value > 250){
                     if (swipeDirection == UP){
                         //the finger ended up in the top part of the screen.
                         //Check if the difference is much and swipe up;
@@ -354,7 +355,28 @@ public class LauncherActivity extends CoreActivity{
     private void moveViewToBottom(){
         //Log.e("Height", String.valueOf(height));
         activityLauncherBinding.appsListHolder.animate().alpha(0).setDuration(110).setStartDelay(10).setInterpolator(new AccelerateInterpolator());
-        activityLauncherBinding.appsListRecycler.animate().translationY(height).setDuration(85).setInterpolator(new DecelerateInterpolator());
+        activityLauncherBinding.appsListRecycler.animate().translationY(height).setDuration(85).setInterpolator(new DecelerateInterpolator()).setListener(new Animator.AnimatorListener() {
+            @Override
+            public void onAnimationStart(Animator animator) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animator animator) {
+                activityLauncherBinding.appsListRecycler.setNestedScrollingEnabled(false);
+                activityLauncherBinding.appsListRecycler.scrollToPosition(0);
+            }
+
+            @Override
+            public void onAnimationCancel(Animator animator) {
+
+            }
+
+            @Override
+            public void onAnimationRepeat(Animator animator) {
+
+            }
+        });
         //set mPosY back to the height;
         mPosY = height;
 
@@ -371,7 +393,6 @@ public class LauncherActivity extends CoreActivity{
         setVisibility(activityLauncherBinding.topPanel, View.VISIBLE);
 
         //activityLauncherBinding.appsListRecycler.removeOnItemTouchListener(recyclerViewDisabler);
-        activityLauncherBinding.appsListRecycler.setNestedScrollingEnabled(false);
         //setVisibility(activityLauncherBinding.appsListRecycler, View.VISIBLE);
     }
 

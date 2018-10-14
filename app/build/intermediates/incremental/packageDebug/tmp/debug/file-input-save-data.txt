@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Tue Oct 09 19:43:39 WAT 2018
+#Sun Oct 14 15:59:37 WAT 2018
 17.baseType=DIRECTORY
 4.path=fonts/productsans/Product_Sans_Bold_Italic.ttf
 8.set=DEX
