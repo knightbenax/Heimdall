@@ -99,7 +99,6 @@ public class LauncherActivityViewModel extends CoreViewModel {
             app.setIcon(ri.activityInfo.loadIcon(pm));
             appsList.add(app);
         }
-
         //Log.e("Apps", String.valueOf(appsList.size()));
 
         return appsList;
@@ -148,6 +147,10 @@ public class LauncherActivityViewModel extends CoreViewModel {
             this.activity = activity;
         }
 
+        public void openDrawer(View view){
+            launcherActivity.moveViewToTop();
+        }
+
         public void openPhoneApp(View view){
             Intent callIntent = new Intent(Intent.ACTION_DIAL);
             activity.startActivity(callIntent);
@@ -166,7 +169,7 @@ public class LauncherActivityViewModel extends CoreViewModel {
         }
 
         public void openWhatsApp(View view){
-            Intent sendIntent = activity.getPackageManager().getLaunchIntentForPackage("com.whatsapp");
+            Intent sendIntent = activity.getPackageManager().getLaunchIntentForPackage("com.gbwhatsapp");
             activity.startActivity(sendIntent);
         }
 
@@ -181,8 +184,8 @@ public class LauncherActivityViewModel extends CoreViewModel {
             activity.startActivity(sendIntent);
         }
 
-        public void setGreeting(){
-            Long timeStamp = System.currentTimeMillis();
+        void setGreeting(){
+            long timeStamp = System.currentTimeMillis();
             Calendar calendar = Calendar.getInstance(Locale.getDefault());
             calendar.setTimeInMillis(timeStamp);
             int hour = calendar.get(Calendar.HOUR_OF_DAY);

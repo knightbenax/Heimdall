@@ -27,9 +27,9 @@
         <LinearLayout
             android:layout_width="match_parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:gravity="end"
+            android:gravity="center"
             android:id="@+id/top_panel"
-            android:layout_marginTop="@dimen/size_32dp"
+            android:layout_marginTop="@dimen/size_82dp"
             android:orientation="vertical"
             android:paddingLeft="@dimen/size_16dp"
             android:paddingRight="@dimen/size_16dp"
@@ -46,7 +46,7 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:orientation="horizontal"
-                android:gravity="center"
+                android:gravity="center_vertical"
                 android:visibility="gone"
                 android:layout_marginTop="6dp"
                 android:id="@+id/weather_holder"
@@ -54,19 +54,19 @@
 
 
                 <ImageView
-                    android:layout_width="wrap_content"
+                    android:layout_width="@dimen/size_24dp"
                     android:src="@drawable/clouds_sun"
-                    android:scaleType="fitEnd"
                     android:id="@+id/weather_icon"
-                    android:layout_marginRight="8dp"
-                    android:layout_height="26dp" />
+                    android:layout_marginTop="@dimen/size_2dp"
+                    android:layout_height="@dimen/size_24dp" />
 
                 <TextView
                     android:id="@+id/weather_tag"
                     android:shadowRadius="4"
+                    android:layout_marginStart="8dp"
                     android:shadowColor="@color/trans_black"
                     style="@style/BoldText"
-                    android:textSize="@dimen/font_24sp"
+                    android:textSize="@dimen/font_40sp"
                     />
 
             </LinearLayout>
@@ -90,7 +90,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/gesture_holder"
             android:gravity="center"
-            android:layout_marginBottom="@dimen/size_16dp"
+            android:layout_marginBottom="@dimen/size_28dp"
             app:layout_constraintBottom_toTopOf="@id/buttons_holder"
             android:orientation="horizontal">
 
@@ -99,6 +99,7 @@
                 android:id="@+id/arrow_up"
                 android:layout_width="@dimen/size_24dp"
                 android:layout_height="@dimen/size_24dp"
+                android:tag="binding_2"                                    
                 android:scaleType="centerInside"
                 android:src="@drawable/arrow_up"
                 />
@@ -112,7 +113,7 @@
             android:layout_height="wrap_content"
             android:weightSum="6"
             android:gravity="center"
-            android:layout_marginBottom="@dimen/size_44dp"
+            android:layout_marginBottom="@dimen/size_64dp"
             android:paddingLeft="@dimen/size_10dp"
             android:paddingRight="@dimen/size_10dp"
             android:orientation="horizontal">
@@ -120,42 +121,72 @@
             <ImageButton
                 style="@style/LauncherIcon"
                 android:id="@+id/phone_app"
-                android:tag="binding_2"                                 
+                android:tag="binding_3"                                 
                 android:src="@drawable/call"
                 />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" >
+            </Space>
 
             <ImageButton
                 style="@style/LauncherIcon"
                 android:id="@+id/contact_app"
-                android:tag="binding_3"                                     
+                android:tag="binding_4"                                     
                 android:src="@drawable/profile_image_round"
                 />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" >
+            </Space>
 
             <ImageButton
                 style="@style/LauncherIcon"
                 android:id="@+id/sms_app"
-                android:tag="binding_4"                             
+                android:tag="binding_5"                             
                 android:src="@drawable/message_three_points"
                 />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" >
+            </Space>
 
             <ImageButton
                 style="@style/LauncherIcon"
                 android:id="@+id/whats_app"
-                android:tag="binding_5"                                 
+                android:tag="binding_6"                                 
                 android:src="@drawable/whatsapp"
                 />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" >
+            </Space>
 
             <ImageButton
                 style="@style/LauncherIcon"
                 android:id="@+id/email_app"
-                android:tag="binding_6"                                 
+                android:tag="binding_7"                                 
                 android:src="@drawable/email"
                 />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" >
+            </Space>
 
             <ImageButton
                 style="@style/LauncherIcon"
                 android:id="@+id/chrome_app"
-                android:tag="binding_7"                                   
+                android:tag="binding_8"                                   
                 android:src="@drawable/google_chrome"
                 />
 

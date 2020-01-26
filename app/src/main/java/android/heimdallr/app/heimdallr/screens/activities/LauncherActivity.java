@@ -2,8 +2,13 @@ package android.heimdallr.app.heimdallr.screens.activities;
 
 import android.animation.Animator;
 import android.annotation.SuppressLint;
+import android.content.ComponentName;
+import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
 import android.databinding.DataBindingUtil;
+import android.graphics.drawable.Drawable;
 import android.heimdallr.app.heimdallr.BuildConfig;
 import android.heimdallr.app.heimdallr.HeimdallrApplication;
 import android.heimdallr.app.heimdallr.R;
@@ -67,6 +72,8 @@ public class LauncherActivity extends CoreActivity{
     @Inject
     LauncherActivityViewModel launcherActivityViewModel;
 
+    public boolean shouldHideView = true;
+
     public HideDrawerListener hideDrawerListener;
 
     PermissionsManager permissionsManager;
@@ -96,9 +103,28 @@ public class LauncherActivity extends CoreActivity{
 
         initPermissionsManager();
         initGestureListener();
+        setHeimdallrTheme(WHITE);
+        loadIcons();
     }
 
+    private void loadIcons(){
+        activityLauncherBinding.phoneApp.setImageDrawable(getActivityIcon(this, "com.android.contacts", "com.android.dialer.DialtactsActivity"));
+        activityLauncherBinding.contactApp.setImageDrawable(getActivityIcon(this, "com.google.android.contacts", "com.android.contacts.activities.PeopleActivity"));
+        activityLauncherBinding.smsApp.setImageDrawable(getActivityIcon(this, "com.truecaller", "com.truecaller.ui.TruecallerInit"));
+        //activityLauncherBinding.whatsApp.setImageDrawable(getActivityIcon(this, "com.whatsapp", "com.whatsapp.Main"));
+        activityLauncherBinding.whatsApp.setImageDrawable(getActivityIcon(this, "com.gbwhatsapp", "com.gbwhatsapp.1"));
+        activityLauncherBinding.emailApp.setImageDrawable(getActivityIcon(this, "com.google.android.gm", "com.google.android.gm.ConversationListActivityGmail"));
+        activityLauncherBinding.chromeApp.setImageDrawable(getActivityIcon(this, "com.android.chrome", "com.google.android.apps.chrome.Main"));
+    }
 
+    public static Drawable getActivityIcon(Context context, String packageName, String activityName) {
+        PackageManager pm = context.getPackageManager();
+        Intent intent = new Intent();
+        intent.setComponent(new ComponentName(packageName, activityName));
+        ResolveInfo resolveInfo = pm.resolveActivity(intent, 0);
+
+        return resolveInfo.loadIcon(pm);
+    }
 
     @Override
     public void onBackPressed(){
@@ -158,12 +184,12 @@ public class LauncherActivity extends CoreActivity{
         switch (theme){
             case WHITE:
                 TransitionManager.beginDelayedTransition(activityLauncherBinding.container);
-                activityLauncherBinding.phoneApp.setColorFilter(null);
+                /*activityLauncherBinding.phoneApp.setColorFilter(null);
                 activityLauncherBinding.contactApp.setColorFilter(null);
                 activityLauncherBinding.smsApp.setColorFilter(null);
                 activityLauncherBinding.whatsApp.setColorFilter(null);
                 activityLauncherBinding.emailApp.setColorFilter(null);
-                activityLauncherBinding.chromeApp.setColorFilter(null);
+                activityLauncherBinding.chromeApp.setColorFilter(null);*/
                 activityLauncherBinding.arrowUp.setColorFilter(null);
                 activityLauncherBinding.weatherIcon.setColorFilter(null);
                 activityLauncherBinding.weatherTag.setTextColor(getResources().getColor(R.color.white));
@@ -174,19 +200,19 @@ public class LauncherActivity extends CoreActivity{
                 break;
             case BLACK:
                 TransitionManager.beginDelayedTransition(activityLauncherBinding.container);
-                activityLauncherBinding.phoneApp.setColorFilter(getResources().getColor(R.color.dark_black));
+                /*activityLauncherBinding.phoneApp.setColorFilter(getResources().getColor(R.color.dark_black));
                 activityLauncherBinding.contactApp.setColorFilter(getResources().getColor(R.color.dark_black));
                 activityLauncherBinding.smsApp.setColorFilter(getResources().getColor(R.color.dark_black));
                 activityLauncherBinding.whatsApp.setColorFilter(getResources().getColor(R.color.dark_black));
                 activityLauncherBinding.emailApp.setColorFilter(getResources().getColor(R.color.dark_black));
-                activityLauncherBinding.chromeApp.setColorFilter(getResources().getColor(R.color.dark_black));
+                activityLauncherBinding.chromeApp.setColorFilter(getResources().getColor(R.color.dark_black));*/
                 activityLauncherBinding.arrowUp.setColorFilter(getResources().getColor(R.color.dark_black));
                 activityLauncherBinding.weatherIcon.setColorFilter(getResources().getColor(R.color.dark_black));
                 activityLauncherBinding.weatherTag.setTextColor(getResources().getColor(R.color.dark_black));
                 activityLauncherBinding.weatherTag.setShadowLayer(0, 0, 0, getResources().getColor(R.color.trans_black));
                 activityLauncherBinding.greetingText.setTextColor(getResources().getColor(R.color.dark_black));
                 activityLauncherBinding.greetingText.setShadowLayer(0, 0, 0, getResources().getColor(R.color.trans_black));
-                setLightStatusBar(false);
+                setLightStatusBar(true);
                 break;
         }
     }
@@ -199,6 +225,8 @@ public class LauncherActivity extends CoreActivity{
         activityLauncherBinding.appsListRecycler.setLayoutManager(gridLayoutManager);
         activityLauncherBinding.appsListRecycler.setHasFixedSize(true);
         fetchApps = true;
+
+
 
         /*activityLauncherBinding.appsListRecycler.addOnScrollListener(new RecyclerView.OnScrollListener() {
             @Override
@@ -213,7 +241,9 @@ public class LauncherActivity extends CoreActivity{
 
     @Override
     public void onPause(){
-        moveViewToBottom();
+        if (shouldHideView){
+            moveViewToBottom();
+        }
         super.onPause();
     }
 
@@ -221,6 +251,7 @@ public class LauncherActivity extends CoreActivity{
     public void onResume(){
         getApps();
         getLocation();
+
         super.onResume();
     }
 
@@ -352,7 +383,7 @@ public class LauncherActivity extends CoreActivity{
         return true;
     }
 
-    private void moveViewToBottom(){
+    public void moveViewToBottom(){
         //Log.e("Height", String.valueOf(height));
         activityLauncherBinding.appsListHolder.animate().alpha(0).setDuration(110).setStartDelay(10).setInterpolator(new AccelerateInterpolator());
         activityLauncherBinding.appsListRecycler.animate().translationY(height).setDuration(85).setInterpolator(new DecelerateInterpolator()).setListener(new Animator.AnimatorListener() {
@@ -391,12 +422,13 @@ public class LauncherActivity extends CoreActivity{
         setVisibility(activityLauncherBinding.gestureHolder, View.VISIBLE);
         setVisibility(activityLauncherBinding.buttonsHolder, View.VISIBLE);
         setVisibility(activityLauncherBinding.topPanel, View.VISIBLE);
+        activityLauncherBinding.appsListRecycler.performHapticFeedback(5);
 
         //activityLauncherBinding.appsListRecycler.removeOnItemTouchListener(recyclerViewDisabler);
         //setVisibility(activityLauncherBinding.appsListRecycler, View.VISIBLE);
     }
 
-    private void moveViewToTop(){
+    public void moveViewToTop(){
         //setVisibility(activityLauncherBinding.appsListRecycler, View.VISIBLE);
         //activityLauncherBinding.appsListHolder.
         activityLauncherBinding.appsListHolder.animate().alpha(1).setDuration(110).setStartDelay(10).setInterpolator(new AccelerateInterpolator());
@@ -415,6 +447,7 @@ public class LauncherActivity extends CoreActivity{
 
         //activityLauncherBinding.appsListRecycler.addOnItemTouchListener(recyclerViewDisabler);
         activityLauncherBinding.appsListRecycler.setNestedScrollingEnabled(true);
+        activityLauncherBinding.appsListRecycler.performHapticFeedback(5);
         //setVisibility(activityLauncherBinding.appsListRecycler, View.VISIBLE);
     }
 
@@ -524,7 +557,7 @@ public class LauncherActivity extends CoreActivity{
                     case 200:
                         String temp = weatherResponseResponse.body().getMain().getTemp().toString();
                         //activityLauncherBinding.weatherTag.setText(Html.fromHtml(temp + "<sup>°</sup>C", 0));
-                        activityLauncherBinding.weatherTag.setText(temp + "°C");
+                        activityLauncherBinding.weatherTag.setText(temp + "°c");
                         //Log.e("Temp", temp);
                         setWeatherIcon(weatherResponseResponse.body().getWeather().get(0).getId());
                         setVisibility(activityLauncherBinding.weatherHolder, View.VISIBLE);

@@ -7,6 +7,7 @@ import android.heimdallr.app.heimdallr.R;
 import android.heimdallr.app.heimdallr.core.models.App;
 import android.heimdallr.app.heimdallr.databinding.LayoutSingleAppBinding;
 import android.heimdallr.app.heimdallr.screens.activities.LauncherActivity;
+import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -57,6 +58,19 @@ public class AppsAdapter extends RecyclerView.Adapter<AppsAdapter.ViewHolder> {
             public void onClick(View view) {
                 Intent intent = mContext.getPackageManager().getLaunchIntentForPackage(appList.get(position).getPackage_name());
                 mContext.startActivity(intent);
+            }
+        });
+
+        holder.layoutSingleAppBinding.getRoot().setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                activity.shouldHideView = false;
+                Intent intent = new Intent(android.provider.Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
+                intent.setData(Uri.parse("package:" + appList.get(position).getPackage_name()));
+                mContext.startActivity(intent);
+                activity.moveViewToBottom();
+                activity.shouldHideView = true;
+                return false;
             }
         });
         //holder.layoutSingleAppBinding.setGame(extendedGame);

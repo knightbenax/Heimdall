@@ -497,14 +497,14 @@ public final class R {
         public static final int notification_subtext_size = 0x7f06009a;
         public static final int notification_top_pad = 0x7f06009b;
         public static final int notification_top_pad_large_text = 0x7f06009c;
-        public static final int tooltip_corner_radius = 0x7f0600b6;
-        public static final int tooltip_horizontal_padding = 0x7f0600b7;
-        public static final int tooltip_margin = 0x7f0600b8;
-        public static final int tooltip_precise_anchor_extra_offset = 0x7f0600b9;
-        public static final int tooltip_precise_anchor_threshold = 0x7f0600ba;
-        public static final int tooltip_vertical_padding = 0x7f0600bb;
-        public static final int tooltip_y_offset_non_touch = 0x7f0600bc;
-        public static final int tooltip_y_offset_touch = 0x7f0600bd;
+        public static final int tooltip_corner_radius = 0x7f0600b7;
+        public static final int tooltip_horizontal_padding = 0x7f0600b8;
+        public static final int tooltip_margin = 0x7f0600b9;
+        public static final int tooltip_precise_anchor_extra_offset = 0x7f0600ba;
+        public static final int tooltip_precise_anchor_threshold = 0x7f0600bb;
+        public static final int tooltip_vertical_padding = 0x7f0600bc;
+        public static final int tooltip_y_offset_non_touch = 0x7f0600bd;
+        public static final int tooltip_y_offset_touch = 0x7f0600be;
     }
     public static final class drawable {
         private drawable() {}

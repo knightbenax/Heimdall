@@ -6,8 +6,6 @@
         android:icon="@drawable/lock"
         android:title="@string/unlock" />
 
-
-
     <item
         android:id="@+id/navigation_notifications"
         android:icon="@drawable/info"
