@@ -30,7 +30,7 @@
 18        android:allowBackup="true"
 18-->/Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/src/main/AndroidManifest.xml:13:9-35
 19        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-19-->[androidx.core:core:1.1.0] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/e9dab9c67c1ee3668e0bbf86c6d8cbd8/core-1.1.0/AndroidManifest.xml:24:18-86
+19-->[androidx.core:core:1.1.0] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/34b4ab0d8b65ac74ddd00d45b26dd963/core-1.1.0/AndroidManifest.xml:24:18-86
 20        android:debuggable="true"
 21        android:icon="@mipmap/ic_launcher"
 21-->/Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/src/main/AndroidManifest.xml:14:9-43
@@ -69,20 +69,20 @@
 37            </intent-filter>
 38        </activity>
 39        <activity
-39-->[com.google.android.gms:play-services-base:17.0.0] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/77c2fc448e2bd0738fd67dce062b1efd/play-services-base-17.0.0/AndroidManifest.xml:23:9-26:75
+39-->[com.google.android.gms:play-services-base:17.0.0] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/d810550874c071a7f5afc391a91fdc61/jetified-play-services-base-17.0.0/AndroidManifest.xml:23:9-26:75
 40            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-40-->[com.google.android.gms:play-services-base:17.0.0] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/77c2fc448e2bd0738fd67dce062b1efd/play-services-base-17.0.0/AndroidManifest.xml:24:13-79
+40-->[com.google.android.gms:play-services-base:17.0.0] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/d810550874c071a7f5afc391a91fdc61/jetified-play-services-base-17.0.0/AndroidManifest.xml:24:13-79
 41            android:exported="false"
-41-->[com.google.android.gms:play-services-base:17.0.0] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/77c2fc448e2bd0738fd67dce062b1efd/play-services-base-17.0.0/AndroidManifest.xml:25:13-37
+41-->[com.google.android.gms:play-services-base:17.0.0] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/d810550874c071a7f5afc391a91fdc61/jetified-play-services-base-17.0.0/AndroidManifest.xml:25:13-37
 42            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-42-->[com.google.android.gms:play-services-base:17.0.0] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/77c2fc448e2bd0738fd67dce062b1efd/play-services-base-17.0.0/AndroidManifest.xml:26:13-72
+42-->[com.google.android.gms:play-services-base:17.0.0] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/d810550874c071a7f5afc391a91fdc61/jetified-play-services-base-17.0.0/AndroidManifest.xml:26:13-72
 43
 44        <meta-data
-44-->[com.google.android.gms:play-services-basement:17.0.0] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/a946518af05b22567e8180ca255302f4/jetified-play-services-basement-17.0.0/AndroidManifest.xml:23:9-25:69
+44-->[com.google.android.gms:play-services-basement:17.0.0] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/5feaec8abf5f0f657ccb7d51c61164e6/jetified-play-services-basement-17.0.0/AndroidManifest.xml:23:9-25:69
 45            android:name="com.google.android.gms.version"
-45-->[com.google.android.gms:play-services-basement:17.0.0] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/a946518af05b22567e8180ca255302f4/jetified-play-services-basement-17.0.0/AndroidManifest.xml:24:13-58
+45-->[com.google.android.gms:play-services-basement:17.0.0] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/5feaec8abf5f0f657ccb7d51c61164e6/jetified-play-services-basement-17.0.0/AndroidManifest.xml:24:13-58
 46            android:value="@integer/google_play_services_version" />
-46-->[com.google.android.gms:play-services-basement:17.0.0] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/a946518af05b22567e8180ca255302f4/jetified-play-services-basement-17.0.0/AndroidManifest.xml:25:13-66
+46-->[com.google.android.gms:play-services-basement:17.0.0] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/5feaec8abf5f0f657ccb7d51c61164e6/jetified-play-services-basement-17.0.0/AndroidManifest.xml:25:13-66
 47    </application>
 48
 49</manifest>

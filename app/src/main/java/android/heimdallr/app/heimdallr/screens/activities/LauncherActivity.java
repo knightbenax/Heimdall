@@ -341,7 +341,7 @@ public class LauncherActivity extends CoreActivity{
 
                 float value = Math.abs(mDy);
 
-                if (value > 250){
+                if (value > 200){
                     if (swipeDirection == UP){
                         //the finger ended up in the top part of the screen.
                         //Check if the difference is much and swipe up;
@@ -537,6 +537,7 @@ public class LauncherActivity extends CoreActivity{
 
     @SuppressLint("NewApi")
     private void setWeather(Location location){
+        Log.e("Stuff", "Mad");
         launcherActivityViewModel.getWeather(String.valueOf(location.getLatitude()), String.valueOf(location.getLongitude()), BuildConfig.WeatherAPIKey, "metric").subscribe(new Observer<Response<WeatherResponse>>() {
             @Override
             public void onCompleted() {
@@ -553,7 +554,10 @@ public class LauncherActivity extends CoreActivity{
             public void onNext(Response<WeatherResponse> weatherResponseResponse) {
                 int responseCode = weatherResponseResponse.code();
                 //Log.e("Response", String.valueOf(responseCode));
+                Log.e("Stuff", "Fetch");
+                Log.e("Stuff", String.valueOf(responseCode));
                 switch (responseCode){
+
                     case 200:
                         String temp = weatherResponseResponse.body().getMain().getTemp().toString();
                         //activityLauncherBinding.weatherTag.setText(Html.fromHtml(temp + "<sup>°</sup>C", 0));
