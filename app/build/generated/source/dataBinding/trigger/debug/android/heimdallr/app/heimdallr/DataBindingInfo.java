@@ -1,6 +1,6 @@
 package android.heimdallr.app.heimdallr;
 
-import android.databinding.BindingBuildInfo;
+import androidx.databinding.BindingBuildInfo;
 
 @BindingBuildInfo
 public class DataBindingInfo {}

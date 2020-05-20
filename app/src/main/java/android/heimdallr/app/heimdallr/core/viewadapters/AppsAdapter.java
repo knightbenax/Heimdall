@@ -2,14 +2,14 @@ package android.heimdallr.app.heimdallr.core.viewadapters;
 
 import android.content.Context;
 import android.content.Intent;
-import android.databinding.DataBindingUtil;
+import androidx.databinding.DataBindingUtil;
 import android.heimdallr.app.heimdallr.R;
 import android.heimdallr.app.heimdallr.core.models.App;
 import android.heimdallr.app.heimdallr.databinding.LayoutSingleAppBinding;
 import android.heimdallr.app.heimdallr.screens.activities.LauncherActivity;
 import android.net.Uri;
-import android.support.annotation.NonNull;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;

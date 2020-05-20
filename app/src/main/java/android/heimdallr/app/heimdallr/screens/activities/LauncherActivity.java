@@ -7,7 +7,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
-import android.databinding.DataBindingUtil;
+import androidx.databinding.DataBindingUtil;
 import android.graphics.drawable.Drawable;
 import android.heimdallr.app.heimdallr.BuildConfig;
 import android.heimdallr.app.heimdallr.HeimdallrApplication;
@@ -24,10 +24,10 @@ import android.heimdallr.app.heimdallr.databinding.ActivityLauncherBinding;
 import android.heimdallr.app.heimdallr.screens.viewmodels.LauncherActivityViewModel;
 import android.location.Location;
 import android.os.Bundle;
-import android.support.constraint.ConstraintSet;
-import android.support.v4.view.MotionEventCompat;
-import android.support.v4.view.animation.FastOutSlowInInterpolator;
-import android.support.v7.widget.GridLayoutManager;
+import androidx.constraintlayout.widget.ConstraintSet;
+import androidx.core.view.MotionEventCompat;
+import androidx.interpolator.view.animation.FastOutSlowInInterpolator;
+import androidx.recyclerview.widget.GridLayoutManager;
 import android.transition.TransitionManager;
 import android.util.DisplayMetrics;
 import android.util.Log;
@@ -108,11 +108,11 @@ public class LauncherActivity extends CoreActivity{
     }
 
     private void loadIcons(){
-        activityLauncherBinding.phoneApp.setImageDrawable(getActivityIcon(this, "com.android.contacts", "com.android.dialer.DialtactsActivity"));
+        activityLauncherBinding.phoneApp.setImageDrawable(getActivityIcon(this, "com.google.android.dialer", "com.google.android.dialer.extensions.GoogleDialtactsActivity"));
         activityLauncherBinding.contactApp.setImageDrawable(getActivityIcon(this, "com.google.android.contacts", "com.android.contacts.activities.PeopleActivity"));
         activityLauncherBinding.smsApp.setImageDrawable(getActivityIcon(this, "com.truecaller", "com.truecaller.ui.TruecallerInit"));
         //activityLauncherBinding.whatsApp.setImageDrawable(getActivityIcon(this, "com.whatsapp", "com.whatsapp.Main"));
-        activityLauncherBinding.whatsApp.setImageDrawable(getActivityIcon(this, "com.gbwhatsapp", "com.gbwhatsapp.1"));
+        activityLauncherBinding.whatsApp.setImageDrawable(getActivityIcon(this, "com.gbwhatsapp", "com.gbwhatsapp.0"));
         activityLauncherBinding.emailApp.setImageDrawable(getActivityIcon(this, "com.google.android.gm", "com.google.android.gm.ConversationListActivityGmail"));
         activityLauncherBinding.chromeApp.setImageDrawable(getActivityIcon(this, "com.android.chrome", "com.google.android.apps.chrome.Main"));
     }

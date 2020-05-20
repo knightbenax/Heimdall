@@ -1,14 +1,14 @@
 package android.heimdallr.app.heimdallr.databinding;
 import android.heimdallr.app.heimdallr.R;
 import android.heimdallr.app.heimdallr.BR;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import android.view.View;
 @SuppressWarnings("unchecked")
 public class ActivityLauncherBindingImpl extends ActivityLauncherBinding implements android.heimdallr.app.heimdallr.generated.callback.OnClickListener.Listener {
 
     @Nullable
-    private static final android.databinding.ViewDataBinding.IncludedLayouts sIncludes;
+    private static final androidx.databinding.ViewDataBinding.IncludedLayouts sIncludes;
     @Nullable
     private static final android.util.SparseIntArray sViewsWithIds;
     static {
@@ -44,18 +44,18 @@ public class ActivityLauncherBindingImpl extends ActivityLauncherBinding impleme
     // listeners
     // Inverse Binding Event Handlers
 
-    public ActivityLauncherBindingImpl(@Nullable android.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
+    public ActivityLauncherBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
         this(bindingComponent, root, mapBindings(bindingComponent, root, 18, sIncludes, sViewsWithIds));
     }
-    private ActivityLauncherBindingImpl(android.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
+    private ActivityLauncherBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
             , (android.widget.LinearLayout) bindings[16]
-            , (android.support.v7.widget.RecyclerView) bindings[17]
+            , (androidx.recyclerview.widget.RecyclerView) bindings[17]
             , (android.widget.ImageButton) bindings[2]
             , (android.widget.LinearLayout) bindings[15]
             , (android.widget.ImageButton) bindings[8]
             , (android.widget.ImageButton) bindings[4]
-            , (android.support.constraint.ConstraintLayout) bindings[0]
+            , (androidx.constraintlayout.widget.ConstraintLayout) bindings[0]
             , (android.widget.ImageButton) bindings[7]
             , (android.widget.LinearLayout) bindings[14]
             , (android.widget.TextView) bindings[1]
@@ -181,7 +181,7 @@ public class ActivityLauncherBindingImpl extends ActivityLauncherBinding impleme
         if ((dirtyFlags & 0x3L) != 0) {
             // api target 1
 
-            android.databinding.adapters.TextViewBindingAdapter.setText(this.greetingText, modelGreeting);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.greetingText, modelGreeting);
         }
     }
     // Listener Stub Implementations

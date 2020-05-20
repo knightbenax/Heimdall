@@ -1,15 +1,15 @@
 package android.heimdallr.app.heimdallr.screens.activities;
 
-import android.databinding.DataBindingUtil;
+import androidx.databinding.DataBindingUtil;
 import android.heimdallr.app.heimdallr.HeimdallrApplication;
 import android.heimdallr.app.heimdallr.R;
 import android.heimdallr.app.heimdallr.core.daggger.components.AppMainComponent;
 import android.heimdallr.app.heimdallr.core.views.CoreActivity;
 import android.heimdallr.app.heimdallr.databinding.ActivityMainBinding;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.design.widget.BottomNavigationView;
-import android.util.Log;
+import androidx.annotation.NonNull;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
 import android.view.MenuItem;
 import android.widget.TextView;
 

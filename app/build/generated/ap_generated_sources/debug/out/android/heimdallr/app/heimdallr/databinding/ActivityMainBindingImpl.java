@@ -1,14 +1,14 @@
 package android.heimdallr.app.heimdallr.databinding;
 import android.heimdallr.app.heimdallr.R;
 import android.heimdallr.app.heimdallr.BR;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import android.view.View;
 @SuppressWarnings("unchecked")
 public class ActivityMainBindingImpl extends ActivityMainBinding  {
 
     @Nullable
-    private static final android.databinding.ViewDataBinding.IncludedLayouts sIncludes;
+    private static final androidx.databinding.ViewDataBinding.IncludedLayouts sIncludes;
     @Nullable
     private static final android.util.SparseIntArray sViewsWithIds;
     static {
@@ -24,14 +24,14 @@ public class ActivityMainBindingImpl extends ActivityMainBinding  {
     // listeners
     // Inverse Binding Event Handlers
 
-    public ActivityMainBindingImpl(@Nullable android.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
+    public ActivityMainBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
         this(bindingComponent, root, mapBindings(bindingComponent, root, 4, sIncludes, sViewsWithIds));
     }
-    private ActivityMainBindingImpl(android.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
+    private ActivityMainBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 0
-            , (android.support.constraint.ConstraintLayout) bindings[0]
+            , (androidx.constraintlayout.widget.ConstraintLayout) bindings[0]
             , (android.widget.TextView) bindings[2]
-            , (android.support.design.widget.BottomNavigationView) bindings[3]
+            , (com.google.android.material.bottomnavigation.BottomNavigationView) bindings[3]
             , (android.heimdallr.app.heimdallr.screens.customviews.SkewedLinearLayout) bindings[1]
             );
         this.container.setTag(null);

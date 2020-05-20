@@ -1,14 +1,14 @@
 package android.heimdallr.app.heimdallr;
 
-import android.databinding.DataBinderMapper;
-import android.databinding.DataBindingComponent;
-import android.databinding.ViewDataBinding;
 import android.heimdallr.app.heimdallr.databinding.ActivityLauncherBindingImpl;
 import android.heimdallr.app.heimdallr.databinding.ActivityMainBindingImpl;
 import android.heimdallr.app.heimdallr.databinding.LayoutSingleAppBindingImpl;
 import android.util.SparseArray;
 import android.util.SparseIntArray;
 import android.view.View;
+import androidx.databinding.DataBinderMapper;
+import androidx.databinding.DataBindingComponent;
+import androidx.databinding.ViewDataBinding;
 import java.lang.IllegalArgumentException;
 import java.lang.Integer;
 import java.lang.Object;
@@ -101,7 +101,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
   @Override
   public List<DataBinderMapper> collectDependencies() {
     ArrayList<DataBinderMapper> result = new ArrayList<DataBinderMapper>(1);
-    result.add(new com.android.databinding.library.baseAdapters.DataBinderMapperImpl());
+    result.add(new androidx.databinding.library.baseAdapters.DataBinderMapperImpl());
     return result;
   }
 
