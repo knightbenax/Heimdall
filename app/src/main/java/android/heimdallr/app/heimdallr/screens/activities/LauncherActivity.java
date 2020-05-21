@@ -196,7 +196,7 @@ public class LauncherActivity extends CoreActivity{
                 activityLauncherBinding.weatherTag.setShadowLayer(4, 0, 0, getResources().getColor(R.color.trans_black));
                 activityLauncherBinding.greetingText.setTextColor(getResources().getColor(R.color.white));
                 activityLauncherBinding.greetingText.setShadowLayer(4, 0, 0, getResources().getColor(R.color.trans_black));
-                setLightStatusBar(true);
+                //setLightStatusBar(true);
                 break;
             case BLACK:
                 TransitionManager.beginDelayedTransition(activityLauncherBinding.container);
@@ -212,7 +212,7 @@ public class LauncherActivity extends CoreActivity{
                 activityLauncherBinding.weatherTag.setShadowLayer(0, 0, 0, getResources().getColor(R.color.trans_black));
                 activityLauncherBinding.greetingText.setTextColor(getResources().getColor(R.color.dark_black));
                 activityLauncherBinding.greetingText.setShadowLayer(0, 0, 0, getResources().getColor(R.color.trans_black));
-                setLightStatusBar(true);
+                //setLightStatusBar(true);
                 break;
         }
     }
@@ -412,7 +412,7 @@ public class LauncherActivity extends CoreActivity{
         mPosY = height;
 
         HeimdallrState.getInstance().setCurrentScreen(HeimdallrState.HOME);
-        setLightStatusBar(false);
+        //setLightStatusBar(false);
 
         ConstraintSet constraintSet = new ConstraintSet();
         constraintSet.clone(activityLauncherBinding.container);
@@ -434,7 +434,7 @@ public class LauncherActivity extends CoreActivity{
         activityLauncherBinding.appsListHolder.animate().alpha(1).setDuration(110).setStartDelay(10).setInterpolator(new AccelerateInterpolator());
         activityLauncherBinding.appsListRecycler.animate().translationY(0).setDuration(85).setInterpolator(new FastOutSlowInInterpolator());
         HeimdallrState.getInstance().setCurrentScreen(HeimdallrState.DRAWER);
-        setLightStatusBar(true);
+        //setLightStatusBar(true);
 
         ConstraintSet constraintSet = new ConstraintSet();
         constraintSet.clone(activityLauncherBinding.container);
@@ -537,7 +537,7 @@ public class LauncherActivity extends CoreActivity{
 
     @SuppressLint("NewApi")
     private void setWeather(Location location){
-        Log.e("Stuff", "Mad");
+
         launcherActivityViewModel.getWeather(String.valueOf(location.getLatitude()), String.valueOf(location.getLongitude()), BuildConfig.WeatherAPIKey, "metric").subscribe(new Observer<Response<WeatherResponse>>() {
             @Override
             public void onCompleted() {
@@ -547,15 +547,12 @@ public class LauncherActivity extends CoreActivity{
             @Override
             public void onError(Throwable e) {
                 e.printStackTrace();
-                //Log.e("Find Location", e.getMessage());
             }
 
             @Override
             public void onNext(Response<WeatherResponse> weatherResponseResponse) {
                 int responseCode = weatherResponseResponse.code();
                 //Log.e("Response", String.valueOf(responseCode));
-                Log.e("Stuff", "Fetch");
-                Log.e("Stuff", String.valueOf(responseCode));
                 switch (responseCode){
 
                     case 200:

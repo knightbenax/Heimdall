@@ -1,7 +1,7 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
@@ -51,11 +51,13 @@
     </style>
 
     <style name="BoldText" parent="Text">
-        <item name="fontPath">fonts/Cera/Cera Pro Bold.otf</item>
+        <!--<item name="fontPath">fonts/Cera/Cera Pro Bold.otf</item>-->
+        <item name="fontPath">fonts/productsans/Product_Sans_Bold.ttf</item>
     </style>
 
     <style name="GreetingText" parent="BoldText">
         <item name="android:textSize">@dimen/font_16sp</item>
+
     </style>
 
     <!--<style name="LauncherIcon">

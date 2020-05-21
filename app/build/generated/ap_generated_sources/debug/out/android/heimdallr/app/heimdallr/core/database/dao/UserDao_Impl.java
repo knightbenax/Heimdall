@@ -7,6 +7,8 @@ import androidx.room.EntityInsertionAdapter;
 import androidx.room.RoomDatabase;
 import androidx.room.RoomSQLiteQuery;
 import androidx.room.SharedSQLiteStatement;
+import androidx.room.util.CursorUtil;
+import androidx.room.util.DBUtil;
 import androidx.sqlite.db.SupportSQLiteStatement;
 import java.lang.Override;
 import java.lang.String;
@@ -14,13 +16,13 @@ import java.lang.SuppressWarnings;
 import java.util.ArrayList;
 import java.util.List;
 
-@SuppressWarnings("unchecked")
+@SuppressWarnings({"unchecked", "deprecation"})
 public final class UserDao_Impl implements UserDao {
   private final RoomDatabase __db;
 
-  private final EntityInsertionAdapter __insertionAdapterOfUser;
+  private final EntityInsertionAdapter<User> __insertionAdapterOfUser;
 
-  private final EntityDeletionOrUpdateAdapter __deletionAdapterOfUser;
+  private final EntityDeletionOrUpdateAdapter<User> __deletionAdapterOfUser;
 
   private final SharedSQLiteStatement __preparedStmtOfDeleteAll;
 
@@ -29,7 +31,7 @@ public final class UserDao_Impl implements UserDao {
     this.__insertionAdapterOfUser = new EntityInsertionAdapter<User>(__db) {
       @Override
       public String createQuery() {
-        return "INSERT OR ABORT INTO `user`(`uid`,`name`,`phone`,`email`,`wallet`,`token`,`refreshToken`) VALUES (nullif(?, 0),?,?,?,?,?,?)";
+        return "INSERT OR ABORT INTO `user` (`uid`,`name`,`phone`,`email`,`wallet`,`token`,`refreshToken`) VALUES (nullif(?, 0),?,?,?,?,?,?)";
       }
 
       @Override
@@ -88,7 +90,8 @@ public final class UserDao_Impl implements UserDao {
   }
 
   @Override
-  public void insertAll(User... users) {
+  public void insertAll(final User... users) {
+    __db.assertNotSuspendingTransaction();
     __db.beginTransaction();
     try {
       __insertionAdapterOfUser.insert(users);
@@ -99,7 +102,8 @@ public final class UserDao_Impl implements UserDao {
   }
 
   @Override
-  public void insert(User user) {
+  public void insert(final User user) {
+    __db.assertNotSuspendingTransaction();
     __db.beginTransaction();
     try {
       __insertionAdapterOfUser.insert(user);
@@ -110,7 +114,8 @@ public final class UserDao_Impl implements UserDao {
   }
 
   @Override
-  public void delete(User user) {
+  public void delete(final User user) {
+    __db.assertNotSuspendingTransaction();
     __db.beginTransaction();
     try {
       __deletionAdapterOfUser.handle(user);
@@ -122,6 +127,7 @@ public final class UserDao_Impl implements UserDao {
 
   @Override
   public void deleteAll() {
+    __db.assertNotSuspendingTransaction();
     final SupportSQLiteStatement _stmt = __preparedStmtOfDeleteAll.acquire();
     __db.beginTransaction();
     try {
@@ -137,15 +143,16 @@ public final class UserDao_Impl implements UserDao {
   public List<User> getAll() {
     final String _sql = "SELECT * FROM user";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 0);
-    final Cursor _cursor = __db.query(_statement);
+    __db.assertNotSuspendingTransaction();
+    final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
     try {
-      final int _cursorIndexOfUid = _cursor.getColumnIndexOrThrow("uid");
-      final int _cursorIndexOfName = _cursor.getColumnIndexOrThrow("name");
-      final int _cursorIndexOfPhone = _cursor.getColumnIndexOrThrow("phone");
-      final int _cursorIndexOfEmail = _cursor.getColumnIndexOrThrow("email");
-      final int _cursorIndexOfWallet = _cursor.getColumnIndexOrThrow("wallet");
-      final int _cursorIndexOfToken = _cursor.getColumnIndexOrThrow("token");
-      final int _cursorIndexOfRefreshToken = _cursor.getColumnIndexOrThrow("refreshToken");
+      final int _cursorIndexOfUid = CursorUtil.getColumnIndexOrThrow(_cursor, "uid");
+      final int _cursorIndexOfName = CursorUtil.getColumnIndexOrThrow(_cursor, "name");
+      final int _cursorIndexOfPhone = CursorUtil.getColumnIndexOrThrow(_cursor, "phone");
+      final int _cursorIndexOfEmail = CursorUtil.getColumnIndexOrThrow(_cursor, "email");
+      final int _cursorIndexOfWallet = CursorUtil.getColumnIndexOrThrow(_cursor, "wallet");
+      final int _cursorIndexOfToken = CursorUtil.getColumnIndexOrThrow(_cursor, "token");
+      final int _cursorIndexOfRefreshToken = CursorUtil.getColumnIndexOrThrow(_cursor, "refreshToken");
       final List<User> _result = new ArrayList<User>(_cursor.getCount());
       while(_cursor.moveToNext()) {
         final User _item;
@@ -184,15 +191,16 @@ public final class UserDao_Impl implements UserDao {
   public User getSingleUser() {
     final String _sql = "SELECT * FROM user LIMIT 1";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 0);
-    final Cursor _cursor = __db.query(_statement);
+    __db.assertNotSuspendingTransaction();
+    final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
     try {
-      final int _cursorIndexOfUid = _cursor.getColumnIndexOrThrow("uid");
-      final int _cursorIndexOfName = _cursor.getColumnIndexOrThrow("name");
-      final int _cursorIndexOfPhone = _cursor.getColumnIndexOrThrow("phone");
-      final int _cursorIndexOfEmail = _cursor.getColumnIndexOrThrow("email");
-      final int _cursorIndexOfWallet = _cursor.getColumnIndexOrThrow("wallet");
-      final int _cursorIndexOfToken = _cursor.getColumnIndexOrThrow("token");
-      final int _cursorIndexOfRefreshToken = _cursor.getColumnIndexOrThrow("refreshToken");
+      final int _cursorIndexOfUid = CursorUtil.getColumnIndexOrThrow(_cursor, "uid");
+      final int _cursorIndexOfName = CursorUtil.getColumnIndexOrThrow(_cursor, "name");
+      final int _cursorIndexOfPhone = CursorUtil.getColumnIndexOrThrow(_cursor, "phone");
+      final int _cursorIndexOfEmail = CursorUtil.getColumnIndexOrThrow(_cursor, "email");
+      final int _cursorIndexOfWallet = CursorUtil.getColumnIndexOrThrow(_cursor, "wallet");
+      final int _cursorIndexOfToken = CursorUtil.getColumnIndexOrThrow(_cursor, "token");
+      final int _cursorIndexOfRefreshToken = CursorUtil.getColumnIndexOrThrow(_cursor, "refreshToken");
       final User _result;
       if(_cursor.moveToFirst()) {
         _result = new User();
@@ -228,7 +236,7 @@ public final class UserDao_Impl implements UserDao {
   }
 
   @Override
-  public User findByemail(String email) {
+  public User findByemail(final String email) {
     final String _sql = "SELECT * FROM user WHERE email LIKE ?";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);
     int _argIndex = 1;
@@ -237,15 +245,16 @@ public final class UserDao_Impl implements UserDao {
     } else {
       _statement.bindString(_argIndex, email);
     }
-    final Cursor _cursor = __db.query(_statement);
+    __db.assertNotSuspendingTransaction();
+    final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
     try {
-      final int _cursorIndexOfUid = _cursor.getColumnIndexOrThrow("uid");
-      final int _cursorIndexOfName = _cursor.getColumnIndexOrThrow("name");
-      final int _cursorIndexOfPhone = _cursor.getColumnIndexOrThrow("phone");
-      final int _cursorIndexOfEmail = _cursor.getColumnIndexOrThrow("email");
-      final int _cursorIndexOfWallet = _cursor.getColumnIndexOrThrow("wallet");
-      final int _cursorIndexOfToken = _cursor.getColumnIndexOrThrow("token");
-      final int _cursorIndexOfRefreshToken = _cursor.getColumnIndexOrThrow("refreshToken");
+      final int _cursorIndexOfUid = CursorUtil.getColumnIndexOrThrow(_cursor, "uid");
+      final int _cursorIndexOfName = CursorUtil.getColumnIndexOrThrow(_cursor, "name");
+      final int _cursorIndexOfPhone = CursorUtil.getColumnIndexOrThrow(_cursor, "phone");
+      final int _cursorIndexOfEmail = CursorUtil.getColumnIndexOrThrow(_cursor, "email");
+      final int _cursorIndexOfWallet = CursorUtil.getColumnIndexOrThrow(_cursor, "wallet");
+      final int _cursorIndexOfToken = CursorUtil.getColumnIndexOrThrow(_cursor, "token");
+      final int _cursorIndexOfRefreshToken = CursorUtil.getColumnIndexOrThrow(_cursor, "refreshToken");
       final User _result;
       if(_cursor.moveToFirst()) {
         _result = new User();
@@ -281,7 +290,7 @@ public final class UserDao_Impl implements UserDao {
   }
 
   @Override
-  public User findByphone(String phone) {
+  public User findByphone(final String phone) {
     final String _sql = "SELECT * FROM user WHERE email LIKE ?";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);
     int _argIndex = 1;
@@ -290,15 +299,16 @@ public final class UserDao_Impl implements UserDao {
     } else {
       _statement.bindString(_argIndex, phone);
     }
-    final Cursor _cursor = __db.query(_statement);
+    __db.assertNotSuspendingTransaction();
+    final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
     try {
-      final int _cursorIndexOfUid = _cursor.getColumnIndexOrThrow("uid");
-      final int _cursorIndexOfName = _cursor.getColumnIndexOrThrow("name");
-      final int _cursorIndexOfPhone = _cursor.getColumnIndexOrThrow("phone");
-      final int _cursorIndexOfEmail = _cursor.getColumnIndexOrThrow("email");
-      final int _cursorIndexOfWallet = _cursor.getColumnIndexOrThrow("wallet");
-      final int _cursorIndexOfToken = _cursor.getColumnIndexOrThrow("token");
-      final int _cursorIndexOfRefreshToken = _cursor.getColumnIndexOrThrow("refreshToken");
+      final int _cursorIndexOfUid = CursorUtil.getColumnIndexOrThrow(_cursor, "uid");
+      final int _cursorIndexOfName = CursorUtil.getColumnIndexOrThrow(_cursor, "name");
+      final int _cursorIndexOfPhone = CursorUtil.getColumnIndexOrThrow(_cursor, "phone");
+      final int _cursorIndexOfEmail = CursorUtil.getColumnIndexOrThrow(_cursor, "email");
+      final int _cursorIndexOfWallet = CursorUtil.getColumnIndexOrThrow(_cursor, "wallet");
+      final int _cursorIndexOfToken = CursorUtil.getColumnIndexOrThrow(_cursor, "token");
+      final int _cursorIndexOfRefreshToken = CursorUtil.getColumnIndexOrThrow(_cursor, "refreshToken");
       final User _result;
       if(_cursor.moveToFirst()) {
         _result = new User();
@@ -337,7 +347,8 @@ public final class UserDao_Impl implements UserDao {
   public int countUsers() {
     final String _sql = "SELECT COUNT(*) from user";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 0);
-    final Cursor _cursor = __db.query(_statement);
+    __db.assertNotSuspendingTransaction();
+    final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
     try {
       final int _result;
       if(_cursor.moveToFirst()) {

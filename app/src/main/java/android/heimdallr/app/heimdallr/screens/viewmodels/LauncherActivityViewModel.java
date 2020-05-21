@@ -13,6 +13,7 @@ import android.heimdallr.app.heimdallr.core.models.App;
 import android.heimdallr.app.heimdallr.core.viewmodels.CoreViewModel;
 import android.heimdallr.app.heimdallr.screens.activities.LauncherActivity;
 import android.provider.Telephony;
+import android.util.Log;
 import android.view.View;
 
 import java.util.ArrayList;
@@ -180,7 +181,6 @@ public class LauncherActivityViewModel extends CoreViewModel {
 
         public void openChromeApp(View view){
             Intent sendIntent = activity.getPackageManager().getLaunchIntentForPackage("com.android.chrome");
-            //sendIntent.setData(Uri.parse("sms:"));
             activity.startActivity(sendIntent);
         }
 

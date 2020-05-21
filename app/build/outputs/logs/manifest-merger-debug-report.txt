@@ -17,7 +17,7 @@ MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/knightbenax/.g
 MERGED from [com.google.android.gms:play-services-location:17.0.0] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/bfd9fba511f44155fb89f256b829492f/jetified-play-services-location-17.0.0/AndroidManifest.xml:2:1-9:12
 MERGED from [com.trello:rxlifecycle-android:1.0] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/565f343ff3fa852b972c1471246f7b9d/jetified-rxlifecycle-android-1.0/AndroidManifest.xml:13:1-19:12
 MERGED from [com.jakewharton.timber:timber:4.7.1] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/681e9067cb91cb4b63e1b37805403fa0/jetified-timber-4.7.1/AndroidManifest.xml:2:1-9:12
-MERGED from [androidx.room:room-runtime:2.0.0] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/33a74e6e0d1f199c76e236906fea639f/room-runtime-2.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.room:room-runtime:2.2.5] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/ff92c23acb3ff63da9830c47d6fbd82e/room-runtime-2.2.5/AndroidManifest.xml:17:1-31:12
 MERGED from [androidx.databinding:viewbinding:3.6.3] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/d7e1dbd864e0a6730701e1279eb2c5bf/jetified-viewbinding-3.6.3/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/ec405108832dd0d34725ec01b1378307/jetified-viewpager2-1.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.gms:play-services-base:17.0.0] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/d810550874c071a7f5afc391a91fdc61/jetified-play-services-base-17.0.0/AndroidManifest.xml:17:1-29:12
@@ -28,7 +28,6 @@ MERGED from [androidx.fragment:fragment:1.1.0] /Users/knightbenax/.gradle/caches
 MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/369c371dbc36cd3420e0891af4dc30b8/drawerlayout-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/73b741376758043ca71b2712dd6b8e85/coordinatorlayout-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.transition:transition:1.2.0] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/8820464f905e976a0e372e114ed12d81/transition-1.2.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0-rc01] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/fa17cda800e5e420a3058c1f2464cbfb/legacy-support-core-utils-1.0.0-rc01/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/b685d122498cf50e728d648d063a2ff6/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.loader:loader:1.0.0] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/d1290085211f6ca31e4b44ad501b0e7c/loader-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.activity:activity:1.0.0] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/db341947bb3b430f2ccfc05cfed8623a/jetified-activity-1.0.0/AndroidManifest.xml:17:1-24:12
@@ -39,15 +38,12 @@ MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] /Users/knightbenax/.gra
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/0e4335c82d4d573388d62295e89eaaed/versionedparcelable-1.1.0/AndroidManifest.xml:17:1-27:12
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/a87a91cfc12796be4a5399f6708c1bed/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.cardview:cardview:1.0.0] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/271d0ad8fab014e1b69399f7396f344c/cardview-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.sqlite:sqlite-framework:2.0.0] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/074542bf41f587fdca27a86cffb86d47/sqlite-framework-2.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.sqlite:sqlite:2.0.0] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/031104cced4a527a3112309ca2ba16bd/sqlite-2.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.sqlite:sqlite-framework:2.0.1] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/33954c5b145501bac6acfbab4277e4c4/sqlite-framework-2.0.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.sqlite:sqlite:2.0.1] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/2ffa6fb42a0edd43832158b657f9e00f/sqlite-2.0.1/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/9c0d2720907bb8bd5d5976efee735314/lifecycle-livedata-2.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/d00c90699ae27cc1e1ce5e4b3e530617/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/13ac386f95e101744ae5f7d486caaa8c/core-runtime-2.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.0.1] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/000b2fa82e91c757b88d13df13849edc/core-runtime-2.0.1/AndroidManifest.xml:17:1-22:12
 MERGED from [com.jakewharton.rxbinding:rxbinding:0.4.0] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/ca541e07b2e6772af1bc9d207b0d0077/jetified-rxbinding-0.4.0/AndroidManifest.xml:2:1-8:12
-MERGED from [androidx.documentfile:documentfile:1.0.0-rc01] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/62e8b1798dbaf1c950a510723437e843/documentfile-1.0.0-rc01/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0-rc01] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/889781d4bffd19e048618f53f779d98b/localbroadcastmanager-1.0.0-rc01/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.print:print:1.0.0-rc01] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/deb30e26cb7936f82f38e1100ed41f6c/print-1.0.0-rc01/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/9c87d4ce634b90f093cf672ae75a3e2d/lifecycle-viewmodel-2.1.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.savedstate:savedstate:1.0.0] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/f2e8952936b7109d6ac9ab1e40e3d573/jetified-savedstate-1.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/30612fa1f33fcbb3e456c3a5f852366f/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
@@ -99,6 +95,8 @@ MERGED from [com.google.android.gms:play-services-location:17.0.0] /Users/knight
 MERGED from [com.google.android.gms:play-services-location:17.0.0] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/bfd9fba511f44155fb89f256b829492f/jetified-play-services-location-17.0.0/AndroidManifest.xml:7:5-20
 MERGED from [com.jakewharton.timber:timber:4.7.1] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/681e9067cb91cb4b63e1b37805403fa0/jetified-timber-4.7.1/AndroidManifest.xml:7:5-20
 MERGED from [com.jakewharton.timber:timber:4.7.1] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/681e9067cb91cb4b63e1b37805403fa0/jetified-timber-4.7.1/AndroidManifest.xml:7:5-20
+MERGED from [androidx.room:room-runtime:2.2.5] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/ff92c23acb3ff63da9830c47d6fbd82e/room-runtime-2.2.5/AndroidManifest.xml:24:5-29:19
+MERGED from [androidx.room:room-runtime:2.2.5] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/ff92c23acb3ff63da9830c47d6fbd82e/room-runtime-2.2.5/AndroidManifest.xml:24:5-29:19
 MERGED from [com.google.android.gms:play-services-base:17.0.0] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/d810550874c071a7f5afc391a91fdc61/jetified-play-services-base-17.0.0/AndroidManifest.xml:22:5-27:19
 MERGED from [com.google.android.gms:play-services-base:17.0.0] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/d810550874c071a7f5afc391a91fdc61/jetified-play-services-base-17.0.0/AndroidManifest.xml:22:5-27:19
 MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/04971a5fee443d70ab084fc5e1fdb4c5/jetified-play-services-places-placereport-17.0.0/AndroidManifest.xml:22:5-20
@@ -183,8 +181,8 @@ MERGED from [com.trello:rxlifecycle-android:1.0] /Users/knightbenax/.gradle/cach
 MERGED from [com.trello:rxlifecycle-android:1.0] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/565f343ff3fa852b972c1471246f7b9d/jetified-rxlifecycle-android-1.0/AndroidManifest.xml:17:5-44
 MERGED from [com.jakewharton.timber:timber:4.7.1] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/681e9067cb91cb4b63e1b37805403fa0/jetified-timber-4.7.1/AndroidManifest.xml:5:5-43
 MERGED from [com.jakewharton.timber:timber:4.7.1] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/681e9067cb91cb4b63e1b37805403fa0/jetified-timber-4.7.1/AndroidManifest.xml:5:5-43
-MERGED from [androidx.room:room-runtime:2.0.0] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/33a74e6e0d1f199c76e236906fea639f/room-runtime-2.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.room:room-runtime:2.0.0] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/33a74e6e0d1f199c76e236906fea639f/room-runtime-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.room:room-runtime:2.2.5] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/ff92c23acb3ff63da9830c47d6fbd82e/room-runtime-2.2.5/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.room:room-runtime:2.2.5] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/ff92c23acb3ff63da9830c47d6fbd82e/room-runtime-2.2.5/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.databinding:viewbinding:3.6.3] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/d7e1dbd864e0a6730701e1279eb2c5bf/jetified-viewbinding-3.6.3/AndroidManifest.xml:20:5-44
 MERGED from [androidx.databinding:viewbinding:3.6.3] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/d7e1dbd864e0a6730701e1279eb2c5bf/jetified-viewbinding-3.6.3/AndroidManifest.xml:20:5-44
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/ec405108832dd0d34725ec01b1378307/jetified-viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
@@ -205,8 +203,6 @@ MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/knightbe
 MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/73b741376758043ca71b2712dd6b8e85/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.transition:transition:1.2.0] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/8820464f905e976a0e372e114ed12d81/transition-1.2.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.transition:transition:1.2.0] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/8820464f905e976a0e372e114ed12d81/transition-1.2.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0-rc01] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/fa17cda800e5e420a3058c1f2464cbfb/legacy-support-core-utils-1.0.0-rc01/AndroidManifest.xml:20:5-44
-MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0-rc01] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/fa17cda800e5e420a3058c1f2464cbfb/legacy-support-core-utils-1.0.0-rc01/AndroidManifest.xml:20:5-44
 MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/b685d122498cf50e728d648d063a2ff6/viewpager-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/b685d122498cf50e728d648d063a2ff6/viewpager-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.loader:loader:1.0.0] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/d1290085211f6ca31e4b44ad501b0e7c/loader-1.0.0/AndroidManifest.xml:20:5-44
@@ -227,24 +223,18 @@ MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/knightbenax/.gra
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/a87a91cfc12796be4a5399f6708c1bed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.cardview:cardview:1.0.0] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/271d0ad8fab014e1b69399f7396f344c/cardview-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.cardview:cardview:1.0.0] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/271d0ad8fab014e1b69399f7396f344c/cardview-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.sqlite:sqlite-framework:2.0.0] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/074542bf41f587fdca27a86cffb86d47/sqlite-framework-2.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.sqlite:sqlite-framework:2.0.0] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/074542bf41f587fdca27a86cffb86d47/sqlite-framework-2.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.sqlite:sqlite:2.0.0] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/031104cced4a527a3112309ca2ba16bd/sqlite-2.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.sqlite:sqlite:2.0.0] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/031104cced4a527a3112309ca2ba16bd/sqlite-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite-framework:2.0.1] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/33954c5b145501bac6acfbab4277e4c4/sqlite-framework-2.0.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite-framework:2.0.1] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/33954c5b145501bac6acfbab4277e4c4/sqlite-framework-2.0.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite:2.0.1] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/2ffa6fb42a0edd43832158b657f9e00f/sqlite-2.0.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite:2.0.1] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/2ffa6fb42a0edd43832158b657f9e00f/sqlite-2.0.1/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/9c0d2720907bb8bd5d5976efee735314/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/9c0d2720907bb8bd5d5976efee735314/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/d00c90699ae27cc1e1ce5e4b3e530617/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/d00c90699ae27cc1e1ce5e4b3e530617/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/13ac386f95e101744ae5f7d486caaa8c/core-runtime-2.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/13ac386f95e101744ae5f7d486caaa8c/core-runtime-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.1] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/000b2fa82e91c757b88d13df13849edc/core-runtime-2.0.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.1] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/000b2fa82e91c757b88d13df13849edc/core-runtime-2.0.1/AndroidManifest.xml:20:5-44
 MERGED from [com.jakewharton.rxbinding:rxbinding:0.4.0] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/ca541e07b2e6772af1bc9d207b0d0077/jetified-rxbinding-0.4.0/AndroidManifest.xml:6:5-44
 MERGED from [com.jakewharton.rxbinding:rxbinding:0.4.0] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/ca541e07b2e6772af1bc9d207b0d0077/jetified-rxbinding-0.4.0/AndroidManifest.xml:6:5-44
-MERGED from [androidx.documentfile:documentfile:1.0.0-rc01] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/62e8b1798dbaf1c950a510723437e843/documentfile-1.0.0-rc01/AndroidManifest.xml:20:5-44
-MERGED from [androidx.documentfile:documentfile:1.0.0-rc01] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/62e8b1798dbaf1c950a510723437e843/documentfile-1.0.0-rc01/AndroidManifest.xml:20:5-44
-MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0-rc01] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/889781d4bffd19e048618f53f779d98b/localbroadcastmanager-1.0.0-rc01/AndroidManifest.xml:20:5-44
-MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0-rc01] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/889781d4bffd19e048618f53f779d98b/localbroadcastmanager-1.0.0-rc01/AndroidManifest.xml:20:5-44
-MERGED from [androidx.print:print:1.0.0-rc01] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/deb30e26cb7936f82f38e1100ed41f6c/print-1.0.0-rc01/AndroidManifest.xml:20:5-44
-MERGED from [androidx.print:print:1.0.0-rc01] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/deb30e26cb7936f82f38e1100ed41f6c/print-1.0.0-rc01/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/9c87d4ce634b90f093cf672ae75a3e2d/lifecycle-viewmodel-2.1.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/9c87d4ce634b90f093cf672ae75a3e2d/lifecycle-viewmodel-2.1.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.savedstate:savedstate:1.0.0] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/f2e8952936b7109d6ac9ab1e40e3d573/jetified-savedstate-1.0.0/AndroidManifest.xml:20:5-22:41
@@ -263,6 +253,14 @@ INJECTED from /Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app
 		INJECTED from /Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/src/main/AndroidManifest.xml
 		ADDED from /Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/src/main/AndroidManifest.xml
+service#androidx.room.MultiInstanceInvalidationService
+ADDED from [androidx.room:room-runtime:2.2.5] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/ff92c23acb3ff63da9830c47d6fbd82e/room-runtime-2.2.5/AndroidManifest.xml:25:9-28:40
+	android:exported
+		ADDED from [androidx.room:room-runtime:2.2.5] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/ff92c23acb3ff63da9830c47d6fbd82e/room-runtime-2.2.5/AndroidManifest.xml:28:13-37
+	android:directBootAware
+		ADDED from [androidx.room:room-runtime:2.2.5] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/ff92c23acb3ff63da9830c47d6fbd82e/room-runtime-2.2.5/AndroidManifest.xml:27:13-43
+	android:name
+		ADDED from [androidx.room:room-runtime:2.2.5] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/ff92c23acb3ff63da9830c47d6fbd82e/room-runtime-2.2.5/AndroidManifest.xml:26:13-74
 activity#com.google.android.gms.common.api.GoogleApiActivity
 ADDED from [com.google.android.gms:play-services-base:17.0.0] /Users/knightbenax/.gradle/caches/transforms-2/files-2.1/d810550874c071a7f5afc391a91fdc61/jetified-play-services-base-17.0.0/AndroidManifest.xml:23:9-26:75
 	android:exported

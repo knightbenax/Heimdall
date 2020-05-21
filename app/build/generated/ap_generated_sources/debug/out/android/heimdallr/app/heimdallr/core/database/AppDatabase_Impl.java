@@ -6,6 +6,8 @@ import androidx.room.DatabaseConfiguration;
 import androidx.room.InvalidationTracker;
 import androidx.room.RoomOpenHelper;
 import androidx.room.RoomOpenHelper.Delegate;
+import androidx.room.RoomOpenHelper.ValidationResult;
+import androidx.room.util.DBUtil;
 import androidx.room.util.TableInfo;
 import androidx.room.util.TableInfo.Column;
 import androidx.room.util.TableInfo.ForeignKey;
@@ -14,14 +16,14 @@ import androidx.sqlite.db.SupportSQLiteDatabase;
 import androidx.sqlite.db.SupportSQLiteOpenHelper;
 import androidx.sqlite.db.SupportSQLiteOpenHelper.Callback;
 import androidx.sqlite.db.SupportSQLiteOpenHelper.Configuration;
-import java.lang.IllegalStateException;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Set;
 
-@SuppressWarnings("unchecked")
+@SuppressWarnings({"unchecked", "deprecation"})
 public final class AppDatabase_Impl extends AppDatabase {
   private volatile UserDao _userDao;
 
@@ -32,12 +34,17 @@ public final class AppDatabase_Impl extends AppDatabase {
       public void createAllTables(SupportSQLiteDatabase _db) {
         _db.execSQL("CREATE TABLE IF NOT EXISTS `user` (`uid` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `name` TEXT, `phone` TEXT, `email` TEXT, `wallet` TEXT, `token` TEXT, `refreshToken` TEXT)");
         _db.execSQL("CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)");
-        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"d7c8fbc5f4ce4ffb0c3a800f1ae6237a\")");
+        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'd7c8fbc5f4ce4ffb0c3a800f1ae6237a')");
       }
 
       @Override
       public void dropAllTables(SupportSQLiteDatabase _db) {
         _db.execSQL("DROP TABLE IF EXISTS `user`");
+        if (mCallbacks != null) {
+          for (int _i = 0, _size = mCallbacks.size(); _i < _size; _i++) {
+            mCallbacks.get(_i).onDestructiveMigration(_db);
+          }
+        }
       }
 
       @Override
@@ -61,24 +68,34 @@ public final class AppDatabase_Impl extends AppDatabase {
       }
 
       @Override
-      protected void validateMigration(SupportSQLiteDatabase _db) {
+      public void onPreMigrate(SupportSQLiteDatabase _db) {
+        DBUtil.dropFtsSyncTriggers(_db);
+      }
+
+      @Override
+      public void onPostMigrate(SupportSQLiteDatabase _db) {
+      }
+
+      @Override
+      protected RoomOpenHelper.ValidationResult onValidateSchema(SupportSQLiteDatabase _db) {
         final HashMap<String, TableInfo.Column> _columnsUser = new HashMap<String, TableInfo.Column>(7);
-        _columnsUser.put("uid", new TableInfo.Column("uid", "INTEGER", true, 1));
-        _columnsUser.put("name", new TableInfo.Column("name", "TEXT", false, 0));
-        _columnsUser.put("phone", new TableInfo.Column("phone", "TEXT", false, 0));
-        _columnsUser.put("email", new TableInfo.Column("email", "TEXT", false, 0));
-        _columnsUser.put("wallet", new TableInfo.Column("wallet", "TEXT", false, 0));
-        _columnsUser.put("token", new TableInfo.Column("token", "TEXT", false, 0));
-        _columnsUser.put("refreshToken", new TableInfo.Column("refreshToken", "TEXT", false, 0));
+        _columnsUser.put("uid", new TableInfo.Column("uid", "INTEGER", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsUser.put("name", new TableInfo.Column("name", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsUser.put("phone", new TableInfo.Column("phone", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsUser.put("email", new TableInfo.Column("email", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsUser.put("wallet", new TableInfo.Column("wallet", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsUser.put("token", new TableInfo.Column("token", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsUser.put("refreshToken", new TableInfo.Column("refreshToken", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
         final HashSet<TableInfo.ForeignKey> _foreignKeysUser = new HashSet<TableInfo.ForeignKey>(0);
         final HashSet<TableInfo.Index> _indicesUser = new HashSet<TableInfo.Index>(0);
         final TableInfo _infoUser = new TableInfo("user", _columnsUser, _foreignKeysUser, _indicesUser);
         final TableInfo _existingUser = TableInfo.read(_db, "user");
         if (! _infoUser.equals(_existingUser)) {
-          throw new IllegalStateException("Migration didn't properly handle user(android.heimdallr.app.heimdallr.core.database.models.User).\n"
+          return new RoomOpenHelper.ValidationResult(false, "user(android.heimdallr.app.heimdallr.core.database.models.User).\n"
                   + " Expected:\n" + _infoUser + "\n"
                   + " Found:\n" + _existingUser);
         }
+        return new RoomOpenHelper.ValidationResult(true, null);
       }
     }, "d7c8fbc5f4ce4ffb0c3a800f1ae6237a", "b23cd086a79bfb7339f41d41405e710f");
     final SupportSQLiteOpenHelper.Configuration _sqliteConfig = SupportSQLiteOpenHelper.Configuration.builder(configuration.context)
@@ -91,7 +108,9 @@ public final class AppDatabase_Impl extends AppDatabase {
 
   @Override
   protected InvalidationTracker createInvalidationTracker() {
-    return new InvalidationTracker(this, "user");
+    final HashMap<String, String> _shadowTablesMap = new HashMap<String, String>(0);
+    HashMap<String, Set<String>> _viewTables = new HashMap<String, Set<String>>(0);
+    return new InvalidationTracker(this, _shadowTablesMap, _viewTables, "user");
   }
 
   @Override

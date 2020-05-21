@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#041435</color>
+    <color name="colorPrimaryDark">#00c62d6e</color>
+    <color name="colorAccent">#162855</color>
+    <color name="white">#ffffff</color>
+    <color name="single_app_color">#ffffff</color>
+    <color name="dark_black">#2b2b2b</color>
+    <color name="grey">#646464</color>
+    <color name="trans_black">#6a000000</color>
+    <color name="trans_black_full">#00ffffff</color>
+    <color name="trans_black_one">#43000000</color>
+    <color name="trans_black_two">#9d000000</color>
+    <color name="launcher_bg">#A1000000</color>
+</resources>
