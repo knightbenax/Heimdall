@@ -16,6 +16,10 @@
         "source": "/Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/build/generated/res/pngs/debug/drawable-mdpi/ic_scan.png"
     },
     {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher_foreground.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/src/main/res/mipmap-hdpi/ic_launcher_foreground.png"
+    },
+    {
         "merged": "/Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/build/intermediates/res/merged/debug/menu_navigation.xml.flat",
         "source": "/Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/src/main/res/menu/navigation.xml"
     },
@@ -144,6 +148,10 @@
         "source": "/Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/src/main/res/drawable-hdpi/whatsapp.png"
     },
     {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png"
+    },
+    {
         "merged": "/Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-hdpi_mist.png.flat",
         "source": "/Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/src/main/res/drawable-hdpi/mist.png"
     },
@@ -170,6 +178,10 @@
     {
         "merged": "/Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-v24_ic_launcher_foreground.xml.flat",
         "source": "/Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/src/main/res/drawable-v24/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher_foreground.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/src/main/res/mipmap-mdpi/ic_launcher_foreground.png"
     },
     {
         "merged": "/Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-hdpi_clouds_sun.png.flat",
@@ -356,6 +368,10 @@
         "source": "/Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/build/generated/res/pngs/debug/drawable-xxxhdpi/ic_scan.png"
     },
     {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png"
+    },
+    {
         "merged": "/Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-xxhdpi_cloud_moon.png.flat",
         "source": "/Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/src/main/res/drawable-xxhdpi/cloud_moon.png"
     },
@@ -530,5 +546,9 @@
     {
         "merged": "/Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable_ic_launcher_background.xml.flat",
         "source": "/Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/src/main/res/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/src/main/res/mipmap-xhdpi/ic_launcher_foreground.png"
     }
 ]

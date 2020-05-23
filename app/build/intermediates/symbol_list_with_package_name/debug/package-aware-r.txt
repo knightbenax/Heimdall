@@ -834,6 +834,7 @@ color foreground_material_light
 color grey
 color highlighted_text_material_dark
 color highlighted_text_material_light
+color ic_launcher_background
 color launcher_bg
 color material_blue_grey_800
 color material_blue_grey_900
@@ -1955,6 +1956,7 @@ layout text_view_with_theme_line_height
 layout text_view_without_line_height
 menu navigation
 mipmap ic_launcher
+mipmap ic_launcher_foreground
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description
 string _4_tasks
