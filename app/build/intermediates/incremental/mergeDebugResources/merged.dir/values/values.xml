@@ -944,7 +944,7 @@
     <item name="android:windowExitAnimation">@anim/mtrl_bottom_sheet_slide_out</item>
   </style>
     <style name="AppTheme" parent="Theme.MaterialComponents.DayNight">
-        
+        <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
@@ -2784,7 +2784,7 @@
   </style>
     <style name="Base.Widget.MaterialComponents.TextView" parent="Widget.AppCompat.TextView"/>
     <style name="BoldText" parent="Text">
-        
+        <!--<item name="fontPath">fonts/Cera/Cera Pro Bold.otf</item>-->
         <item name="fontPath">fonts/productsans/Product_Sans_Bold.ttf</item>
     </style>
     <style name="BottomNav" parent="LayoutWrapHeight">
@@ -2804,8 +2804,8 @@
 
     </style>
     <style name="LauncherIcon">
-        <item name="android:layout_width">@dimen/size_32dp</item>
-        <item name="android:layout_height">@dimen/size_32dp</item>
+        <item name="android:layout_width">@dimen/size_36dp</item>
+        <item name="android:layout_height">@dimen/size_36dp</item>
         <item name="android:scaleType">centerInside</item>
         <item name="android:background">@null</item>
     </style>
