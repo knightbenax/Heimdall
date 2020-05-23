@@ -153,29 +153,29 @@ public class LauncherActivityViewModel extends CoreViewModel {
         }
 
         public void openPhoneApp(View view){
-            Intent callIntent = new Intent(Intent.ACTION_DIAL);
-            activity.startActivity(callIntent);
+            //Intent callIntent = new Intent(Intent.ACTION_DIAL);
+            //activity.startActivity(callIntent);
+            Intent sendIntent = activity.getPackageManager().getLaunchIntentForPackage("com.facebook.katana");
+            activity.startActivity(sendIntent);
         }
 
         public void openContactApp(View view){
-            activity.startActivity(new Intent(Intent.ACTION_MAIN).addCategory(Intent.CATEGORY_APP_CONTACTS));
+            Intent sendIntent = activity.getPackageManager().getLaunchIntentForPackage("com.whatsapp");
+            activity.startActivity(sendIntent);
         }
 
         public void openSMSApp(View view){
-            String defaultSMSpackage = Telephony.Sms.getDefaultSmsPackage(activity);
-            Intent sendIntent = new Intent(Intent.ACTION_MAIN);
-            sendIntent.setPackage(defaultSMSpackage);
-            //sendIntent.setData(Uri.parse("sms:"));
+            Intent sendIntent = activity.getPackageManager().getLaunchIntentForPackage("com.instagram.android");
             activity.startActivity(sendIntent);
         }
 
         public void openWhatsApp(View view){
-            Intent sendIntent = activity.getPackageManager().getLaunchIntentForPackage("com.gbwhatsapp");
+            Intent sendIntent = activity.getPackageManager().getLaunchIntentForPackage("com.skype.raider");
             activity.startActivity(sendIntent);
         }
 
         public void openEmailApp(View view){
-            Intent sendIntent = new Intent(Intent.ACTION_MAIN).addCategory(Intent.CATEGORY_APP_EMAIL);
+            Intent sendIntent = activity.getPackageManager().getLaunchIntentForPackage("com.google.android.gm");
             activity.startActivity(sendIntent);
         }
 
@@ -191,13 +191,13 @@ public class LauncherActivityViewModel extends CoreViewModel {
             int hour = calendar.get(Calendar.HOUR_OF_DAY);
 
             if (hour > 0 && hour < 12){
-                greeting = "Morning, Bezaleel";
+                greeting = "Morning, Michael";
                 internal_greeting = 0;
             } else if (hour >= 12 && hour <= 16) {
-                greeting = "Afternoon, Bezaleel";
+                greeting = "Afternoon, Michael";
                 internal_greeting = 1;
             } else {
-                greeting = "Evening, Bezaleel";
+                greeting = "Evening, Michael";
                 internal_greeting = 2;
             }
 

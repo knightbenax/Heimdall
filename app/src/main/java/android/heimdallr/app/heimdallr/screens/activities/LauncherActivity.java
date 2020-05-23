@@ -108,22 +108,26 @@ public class LauncherActivity extends CoreActivity{
     }
 
     private void loadIcons(){
-        activityLauncherBinding.phoneApp.setImageDrawable(getActivityIcon(this, "com.google.android.dialer", "com.google.android.dialer.extensions.GoogleDialtactsActivity"));
-        activityLauncherBinding.contactApp.setImageDrawable(getActivityIcon(this, "com.google.android.contacts", "com.android.contacts.activities.PeopleActivity"));
-        activityLauncherBinding.smsApp.setImageDrawable(getActivityIcon(this, "com.truecaller", "com.truecaller.ui.TruecallerInit"));
+        activityLauncherBinding.phoneApp.setImageDrawable(getActivityIcon(this, "com.facebook.katana", "com.facebook.katana.LoginActivity", activityLauncherBinding.whatsApp.getDrawable()));
+        activityLauncherBinding.contactApp.setImageDrawable(getActivityIcon(this, "com.whatsapp", "com.whatsapp.Main", activityLauncherBinding.whatsApp.getDrawable()));
+        activityLauncherBinding.smsApp.setImageDrawable(getActivityIcon(this, "com.instagram.android", "com.instagram.android.activity.MainTabActivity", activityLauncherBinding.whatsApp.getDrawable()));
         //activityLauncherBinding.whatsApp.setImageDrawable(getActivityIcon(this, "com.whatsapp", "com.whatsapp.Main"));
-        activityLauncherBinding.whatsApp.setImageDrawable(getActivityIcon(this, "com.gbwhatsapp", "com.gbwhatsapp.0"));
-        activityLauncherBinding.emailApp.setImageDrawable(getActivityIcon(this, "com.google.android.gm", "com.google.android.gm.ConversationListActivityGmail"));
-        activityLauncherBinding.chromeApp.setImageDrawable(getActivityIcon(this, "com.android.chrome", "com.google.android.apps.chrome.Main"));
+        activityLauncherBinding.whatsApp.setImageDrawable(getActivityIcon(this, "com.skype.raider", "come.skype4life.MainActivity", activityLauncherBinding.whatsApp.getDrawable()));
+        activityLauncherBinding.emailApp.setImageDrawable(getActivityIcon(this, "com.google.android.gm", "com.google.android.gm.ConversationListActivityGmail", activityLauncherBinding.whatsApp.getDrawable()));
+        activityLauncherBinding.chromeApp.setImageDrawable(getActivityIcon(this, "com.android.chrome", "com.google.android.apps.chrome.Main", activityLauncherBinding.whatsApp.getDrawable()));
     }
 
-    public static Drawable getActivityIcon(Context context, String packageName, String activityName) {
+    public static Drawable getActivityIcon(Context context, String packageName, String activityName, Drawable previous) {
         PackageManager pm = context.getPackageManager();
         Intent intent = new Intent();
         intent.setComponent(new ComponentName(packageName, activityName));
         ResolveInfo resolveInfo = pm.resolveActivity(intent, 0);
 
-        return resolveInfo.loadIcon(pm);
+        try {
+            return resolveInfo.loadIcon(pm);
+        } catch (Exception exception){
+            return previous;
+        }
     }
 
     @Override

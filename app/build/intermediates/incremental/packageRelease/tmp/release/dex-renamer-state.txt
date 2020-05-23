@@ -1,0 +1,4 @@
+#Sat May 23 23:04:30 WAT 2020
+base.0=/Users/knightbenax/Desktop/Metro Station/Apps/HeimdallrAndroid/app/build/intermediates/dex/release/out/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
