@@ -1,0 +1,534 @@
+[
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-mdpi_message_three_points.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-mdpi/message_three_points.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-mdpi_email.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-mdpi/email.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-ldpi_sun.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-ldpi/sun.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-ldpi_cloud_moon.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-ldpi/cloud_moon.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/mipmap-mdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_clouds_few.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-xxxhdpi/clouds_few.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-hdpi_moon.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-hdpi/moon.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-mdpi_profile_image_round.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-mdpi/profile_image_round.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable_ic_notifications_black_24dp.xml.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable/ic_notifications_black_24dp.xml"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-hdpi_profile_image_round.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-hdpi/profile_image_round.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-xxhdpi_message_three_points.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-xxhdpi/message_three_points.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-hdpi_clouds_sun.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-hdpi/clouds_sun.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_scan.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/generated/res/pngs/debug/drawable-mdpi/ic_scan.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-ldpi_profile_image_round.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-ldpi/profile_image_round.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/menu_navigation.xml.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/menu/navigation.xml"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-hdpi_mist.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-hdpi/mist.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-xhdpi_email.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-xhdpi/email.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable_ic_dashboard_black_24dp.xml.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable/ic_dashboard_black_24dp.xml"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-hdpi_rain.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-hdpi/rain.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-ldpi_google_chrome.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-ldpi/google_chrome.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-mdpi_thunderstorm.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-mdpi/thunderstorm.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-hdpi_clouds_few.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-hdpi/clouds_few.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-xxhdpi_clouds_few.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-xxhdpi/clouds_few.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-hdpi_drizzle.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-hdpi/drizzle.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_clouds_sun.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-xxxhdpi/clouds_sun.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-xhdpi_google_chrome.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-xhdpi/google_chrome.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-mdpi_clouds_few.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-mdpi/clouds_few.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-mdpi_whatsapp.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-mdpi/whatsapp.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-ldpi_ic_scan.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/generated/res/pngs/debug/drawable-ldpi/ic_scan.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/generated/res/pngs/debug/drawable-anydpi-v24/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_snow.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-xxxhdpi/snow.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-ldpi_whatsapp.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-ldpi/whatsapp.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-mdpi_cloud_moon.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-mdpi/cloud_moon.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-hdpi_call.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-hdpi/call.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-xxhdpi_google_chrome.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-xxhdpi/google_chrome.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-hdpi_sun.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-hdpi/sun.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable_top_gradient.xml.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable/top_gradient.xml"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-xhdpi_profile_image_round.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-xhdpi/profile_image_round.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-xhdpi_thunderstorm.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-xhdpi/thunderstorm.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_ic_scan.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/generated/res/pngs/debug/drawable-xxxhdpi/ic_scan.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-mdpi_arrow_up.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-mdpi/arrow_up.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-ldpi_call.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-ldpi/call.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_call.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-xxxhdpi/call.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_google_chrome.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-xxxhdpi/google_chrome.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-xhdpi_clouds_sun.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-xhdpi/clouds_sun.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-xxhdpi_mist.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-xxhdpi/mist.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-xxhdpi_whatsapp.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-xxhdpi/whatsapp.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-mdpi_clouds_sun.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-mdpi/clouds_sun.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_profile_image_round.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-xxxhdpi/profile_image_round.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-xhdpi_message_three_points.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-xhdpi/message_three_points.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-xhdpi_drizzle.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-xhdpi/drizzle.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-xhdpi_sun.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-xhdpi/sun.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-xxhdpi_moon.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-xxhdpi/moon.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-anydpi-v24_ic_scan.xml.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/generated/res/pngs/debug/drawable-anydpi-v24/ic_scan.xml"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_scan.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/generated/res/pngs/debug/drawable-xhdpi/ic_scan.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-ldpi_message_three_points.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-ldpi/message_three_points.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-ldpi_clouds_sun.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-ldpi/clouds_sun.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-xxhdpi_rain.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-xxhdpi/rain.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-xhdpi_cloud_moon.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-xhdpi/cloud_moon.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-xhdpi_arrow_up.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-xhdpi/arrow_up.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-hdpi_whatsapp.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-hdpi/whatsapp.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-xhdpi_snow.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-xhdpi/snow.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-mdpi_mist.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-mdpi/mist.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-hdpi_thunderstorm.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-hdpi/thunderstorm.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_drizzle.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-xxxhdpi/drizzle.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable_lock.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable/lock.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-mdpi_sun.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-mdpi/sun.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-xhdpi_mist.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-xhdpi/mist.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_cloud_moon.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-xxxhdpi/cloud_moon.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-xxhdpi_profile_image_round.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-xxhdpi/profile_image_round.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-mdpi_moon.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-mdpi/moon.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-xxhdpi_snow.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-xxhdpi/snow.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-hdpi_arrow_up.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-hdpi/arrow_up.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/layout_activity_main.xml.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/layout/activity_main.xml"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-xhdpi_moon.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-xhdpi/moon.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_scan.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/generated/res/pngs/debug/drawable-hdpi/ic_scan.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-hdpi_message_three_points.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-hdpi/message_three_points.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_whatsapp.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-xxxhdpi/whatsapp.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_message_three_points.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-xxxhdpi/message_three_points.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-xxhdpi_email.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-xxhdpi/email.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-xhdpi_rain.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-xhdpi/rain.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-hdpi_cloud_moon.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-hdpi/cloud_moon.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-ldpi_thunderstorm.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-ldpi/thunderstorm.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_email.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-xxxhdpi/email.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-ldpi_drizzle.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-ldpi/drizzle.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/layout_layout_single_app.xml.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/layout/layout_single_app.xml"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-ldpi_snow.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-ldpi/snow.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-xhdpi_call.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-xhdpi/call.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-mdpi_rain.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-mdpi/rain.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/layout_activity_launcher.xml.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/layout/activity_launcher.xml"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-ldpi_rain.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-ldpi/rain.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-xxhdpi_cloud_moon.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-xxhdpi/cloud_moon.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-xhdpi_whatsapp.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-xhdpi/whatsapp.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_arrow_up.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-xxxhdpi/arrow_up.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_scan.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/generated/res/pngs/debug/drawable-xxhdpi/ic_scan.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable_info.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable/info.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_thunderstorm.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-xxxhdpi/thunderstorm.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_mist.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-xxxhdpi/mist.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-hdpi_email.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-hdpi/email.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-mdpi_snow.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-mdpi/snow.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-mdpi_call.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-mdpi/call.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-ldpi_email.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-ldpi/email.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-ldpi_arrow_up.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-ldpi/arrow_up.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-xxhdpi_sun.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-xxhdpi/sun.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_rain.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-xxxhdpi/rain.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/mipmap-hdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-xxhdpi_drizzle.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-xxhdpi/drizzle.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-mdpi_drizzle.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-mdpi/drizzle.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-xxhdpi_clouds_sun.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-xxhdpi/clouds_sun.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_moon.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-xxxhdpi/moon.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable_ic_home_black_24dp.xml.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable/ic_home_black_24dp.xml"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-ldpi_mist.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-ldpi/mist.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-xxhdpi_call.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-xxhdpi/call.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_sun.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-xxxhdpi/sun.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable_ic_launcher_background.xml.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-hdpi_snow.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-hdpi/snow.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-mdpi_google_chrome.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-mdpi/google_chrome.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-xhdpi_clouds_few.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-xhdpi/clouds_few.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-hdpi_google_chrome.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-hdpi/google_chrome.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-xxhdpi_arrow_up.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-xxhdpi/arrow_up.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-xxhdpi_thunderstorm.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-xxhdpi/thunderstorm.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-ldpi_moon.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-ldpi/moon.png"
+    },
+    {
+        "merged": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/build/intermediates/res/merged/debug/drawable-ldpi_clouds_few.png.flat",
+        "source": "/Users/knightbenax/Desktop/Metro Station/Developer/HeimdallrAndroid/app/src/main/res/drawable-ldpi/clouds_few.png"
+    }
+]

@@ -1,8 +1,10 @@
 <component name="libraryTable">
   <library name="Gradle: io.reactivex:rxandroid:1.1.0@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d2b9edf2c4a27e0e393949429acba9f4/jetified-rxandroid-1.1.0/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d2b9edf2c4a27e0e393949429acba9f4/jetified-rxandroid-1.1.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/15363a44412fee84ecfb787a40155174/jetified-rxandroid-1.1.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/15363a44412fee84ecfb787a40155174/jetified-rxandroid-1.1.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/15363a44412fee84ecfb787a40155174/jetified-rxandroid-1.1.0/res" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.reactivex/rxandroid/1.1.0/b816811e963519901eb50d6ad9d65572c3bd1639/rxandroid-1.1.0-javadoc.jar!/" />
